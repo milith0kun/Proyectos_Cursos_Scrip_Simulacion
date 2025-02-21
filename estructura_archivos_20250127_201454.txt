@@ -1,0 +1,74 @@
+Plantilla 1/
+    index.html
+    archivos_html/
+    css/
+        general-nutrition.css
+        healthy-lifestyle.css
+        healthy-recipes.css
+        mental-health.css
+        specific-diets.css
+        styles.css
+    Dietas Específicas/
+        gluten-free-diet.html
+        keto-diet.html
+        mediterranean-diet.html
+        paleo-diet.html
+        specific-diets.html
+        vegan-diet.html
+    Estilo de Vida Saludable/
+        active-living-tips.html
+        daily-routines.html
+        exercise-nutrition.html
+        healthy-lifestyle.html
+        importance-of-sleep.html
+        relaxation-techniques.html
+    images/
+        food/
+            DALL·E 2025-01-26 23.01.44 - Un fondo decorativo para un encabezado de página web con elementos de comida saludable, como frutas, verduras y granos, diseñado en esp.webp
+            DALL·E 2025-01-26 23.03.35 - Un conjunto de imágenes de fondo ligeras y minimalistas diseñadas para secciones web, como beneficios, mitos y mentalidad. Cada fondo inclu.webp
+            Doubao_installer.exe
+        icons/
+            DALL·E 2025-01-26 23.02.53 - Un conjunto de íconos minimalistas diseñados para navegación web, relacionados con una dieta sin gluten. Incluyen íconos pequeños y claros, .webp
+        lifestyle/
+            DALL·E 2025-01-26 21.02.09 - Una ilustración simple y fresca de los beneficios de una dieta sin gluten. La imagen presenta un dibujo básico de un sistema digestivo feliz rodeado d.webp
+            DALL·E 2025-01-26 21.02.33 - Una ilustración fresca y sencilla comparando alimentos sin gluten y con gluten. El lado de los alimentos sin gluten muestra frutas, veg.webp
+            DALL·E 2025-01-26 21.02.36 - Una ilustración sencilla y limpia de un plan de comidas sin gluten. Un plato dividido en tres secciones_ desayuno con yogur, frutas y n.webp
+            DALL·E 2025-01-26 21.02.39 - Una ilustración fresca y minimalista desmintiendo mitos sobre la dieta sin gluten. Una lista con texto en español_ 'No todo sin gluten .webp
+            DALL·E 2025-01-26 21.02.42 - Una ilustración sencilla y natural de una persona leyendo etiquetas de alimentos buscando gluten y sosteniendo una lista de compras en .webp
+            DALL·E 2025-01-26 21.16.03 - Una ilustración fresca y sencilla que represente los beneficios de la dieta cetogénica. La imagen muestra un cuerpo enérgico con una fi.webp
+            DALL·E 2025-01-26 21.16.10 - Una ilustración limpia y fresca comparando alimentos permitidos y prohibidos en una dieta cetogénica. El lado izquierdo muestra aguacat.webp
+            DALL·E 2025-01-26 21.20.46 - Un diseño minimalista de un plato dividido en secciones para un plan de comidas cetogénicas. Cada sección incluye un ejemplo_ desayuno .webp
+            DALL·E 2025-01-26 21.20.49 - Una ilustración clara y simple desmintiendo mitos sobre la dieta cetogénica. Una lista con texto en español_ 'No solo tocino y queso', .webp
+            DALL·E 2025-01-26 21.20.52 - Una ilustración simple y moderna de un calculador de calorías para la dieta cetogénica. Muestra una persona usando una calculadora con .webp
+    js/
+        general-nutrition.js
+        healthy-lifestyle.js
+        healthy-recipes.js
+        mental-health.js
+        script.js
+        specific-diets.js
+    Nutrición General/
+        balanced-diet.html
+        general-nutrition.html
+        hydration.html
+        natural-supplements.html
+        nutrient-rich-foods.html
+        nutrition-myths.html
+    Recetas Saludables/
+        breakfast-recipes.html
+        healthy-recipes.html
+        healthy-snacks.html
+        nutritious-smoothies.html
+        quick-meals.html
+        vegetarian-recipes.html
+    Salud Mental y Alimentación/
+        mental-health.html
+        mindful-eating-techniques.html
+        mindful-eating.html
+        mood-food.html
+        nutrition-supplements.html
+        stress-food.html
+
+Resumen:
+Total de directorios: 13
+Total de archivos: 57
