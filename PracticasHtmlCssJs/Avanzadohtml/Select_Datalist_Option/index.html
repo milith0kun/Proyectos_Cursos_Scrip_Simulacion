@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Select y Datalist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form class="formulario-contacto" id="contactForm" onsubmit="return false;">
+            <h2>Formulario de Contacto</h2>
+            
+            <div class="campo-formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="pais">País</label>
+                <select id="pais" name="pais" required>
+                    <option value="">Selecciona tu país</option>
+                    <optgroup label="América">
+                        <option value="mexico">México</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="peru">Perú</option>
+                    </optgroup>
+                    <optgroup label="Europa">
+                        <option value="espana">España</option>
+                        <option value="francia">Francia</option>
+                        <option value="alemania">Alemania</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="ciudad">Ciudad</label>
+                <input list="ciudades" id="ciudad" name="ciudad" placeholder="Escribe o selecciona tu ciudad">
+                <datalist id="ciudades">
+                    <option value="Madrid"></option>
+                    <option value="Barcelona"></option>
+                    <option value="Ciudad de México"></option>
+                    <option value="Bogotá"></option>
+                    <option value="Lima"></option>
+                    <option value="Buenos Aires"></option>
+                    <option value="París"></option>
+                    <option value="Berlín"></option>
+                </datalist>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="asunto">Tipo de consulta</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">Selecciona el tipo de consulta</option>
+                    <option value="soporte">Soporte técnico</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="facturacion">Facturación</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Handle form submission here
+        });
+    </script>
+</body>
+</html>

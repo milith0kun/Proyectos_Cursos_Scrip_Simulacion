@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía de Unidades CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Guía Práctica de Unidades CSS</h1>
+
+      <section class="unidad-seccion">
+        <h2>Unidades Absolutas</h2>
+        <p class="descripcion">
+          Las unidades absolutas mantienen su tamaño sin importar el dispositivo
+          o contenedor
+        </p>
+        <div class="ejemplo-contenedor">
+          <div class="caja px">100px × 100px<br />(Tamaño fijo en píxeles)</div>
+          <div class="caja pt">
+            100pt × 100pt<br />(≈133px, usado en impresión)
+          </div>
+          <div class="caja in">1in × 1in<br />(1 pulgada = 96px)</div>
+        </div>
+      </section>
+
+      <section class="unidad-seccion">
+        <h2>Unidades Relativas al Textose referrencia al objeto PADRE ROOT</h2>
+        <p class="descripcion">
+          Se ajustan según el tamaño de texto del elemento padre (em) o raíz
+          (rem)
+        </p>
+        <div class="ejemplo-contenedor texto-ejemplo">
+          <div class="texto-base">
+            <h3>Base (16px)</h3>
+            <div class="em-ejemplo">2em = 32px<br />(Basado en el padre)</div>
+            <div class="em-ejemplo-2">3em = 48px<br />(Basado en el padre)</div>
+            <div class="rem-ejemplo">2rem = 32px<br />(Basado en root)</div>
+            <div class="rem-ejemplo-2">3rem = 48px<br />(Basado en root)</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="unidad-seccion">
+        <h2>Unidades Viewport</h2>
+        <p class="descripcion">
+          Se ajustan según el tamaño de la ventana del navegador
+        </p>
+        <div class="ejemplo-contenedor">
+          <div class="viewport-demo vh">50% del Alto de Ventana</div>
+          <div class="viewport-demo vw">50% del Ancho de Ventana</div>
+        </div>
+      </section>
+
+      <section class="unidad-seccion">
+        <h2>Unidades Porcentuales</h2>
+        <p class="descripcion">Relativas al tamaño del contenedor padre</p>
+        <div class="porcentaje-contenedor">
+          <div class="porcentaje-100">Ancho al 100% (500px)</div>
+          <div class="porcentaje-50">Ancho al 50% (250px)</div>
+          <div class="porcentaje-25">Ancho al 25% (125px)</div>
+        </div>
+      </section>
+
+      <section class="unidad-seccion">
+        <h2>Ejemplo Práctico</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Tarjeta Responsiva</h3>
+            <p>Esta tarjeta usa diferentes unidades:</p>
+            <ul>
+              <li>Padding: em</li>
+              <li>Ancho: %</li>
+              <li>Fuente: rem</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuración base */
+:root {
+  /* Define el tamaño base para rem */
+  /* Todos los rem en el documento se basarán en este valor */
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* 2rem = 32px (basado en el root de 16px) */
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.contenedor {
+  /* Ancho máximo absoluto */
+  max-width: 1200px;
+  /* margin: auto centra el contenedor horizontalmente */
+  margin: 0 auto;
+}
+
+/* Demostración de EM y REM */
+.texto-base {
+  /* Establece el contexto para em en sus elementos hijos */
+  font-size: 16px;
+  /* 1rem = 16px (basado en root) */
+  padding: 1rem;
+  background: #f0f0f0;
+}
+
+.em-ejemplo {
+  /* 2em = 32px (basado en el padre .texto-base de 16px) */
+  font-size: 2em;
+  /* 0.5em = 16px (basado en su propio font-size de 32px) */
+  padding: 0.5em;
+  /* 1em = 32px (basado en su propio font-size) */
+  margin: 1em 0;
+}
+
+.rem-ejemplo {
+  /* 2rem = 32px (basado en root de 16px) */
+  font-size: 2rem;
+  /* 0.5rem = 8px (basado en root) */
+  padding: 0.5rem;
+  /* 1rem = 16px (basado en root) */
+  margin: 1rem 0;
+}
+
+/* Clases faltantes para em y rem */
+.em-ejemplo-2 {
+  font-size: 3em; /* 48px (3 × 16px del padre) */
+  padding: 0.5em; /* 24px (basado en su propio font-size) */
+  margin: 1em 0; /* 48px arriba y abajo */
+  background-color: #1976d2;
+  color: white;
+}
+
+.rem-ejemplo-2 {
+  font-size: 3rem; /* 48px (3 × 16px del root) */
+  padding: 0.5rem; /* 8px (basado en root) */
+  margin: 1rem 0; /* 16px arriba y abajo */
+  background-color: #7b1fa2;
+  color: white;
+}
+
+/* Ajustes para unidades absolutas */
+.px {
+  width: 100px;
+  height: 100px;
+  background-color: #ff5733;
+}
+
+.pt {
+  width: 100pt;
+  height: 100pt;
+  background-color: #33ff57;
+}
+
+.in {
+  width: 1in;
+  height: 1in;
+  background-color: #3357ff;
+}
+
+/* Ajustes para viewport */
+.viewport-demo {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.vh {
+  height: 30vh; /* 30% del alto de la ventana */
+  background: #ff5722;
+}
+
+.vw {
+  width: 70vw; /* 70% del ancho de la ventana */
+  height: 100px;
+  background: #ff9800;
+}
+
+/* Porcentajes */
+.porcentaje-contenedor {
+  width: 800px;
+  background: #f5f5f5;
+  padding: 20px;
+  border: 2px solid #ddd;
+}
+
+.porcentaje-100 {
+  width: 100%; /* 800px (ancho completo del padre) */
+  height: 50px;
+  background: #795548;
+  margin-bottom: 10px;
+}
+
+.porcentaje-50 {
+  width: 50%; /* 400px (mitad del padre) */
+  height: 50px;
+  background: #9e9e9e;
+  margin-bottom: 10px;
+}
+
+.porcentaje-25 {
+  width: 25%; /* 200px (cuarto del padre) */
+  height: 50px;
+  background: #607d8b;
+}
+.card {
+  width: 80%;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.card ul {
+  margin-left: 1.5rem;
+}
+
+.card li {
+  margin: 0.5rem 0;
+}
+
+/* Ajustes para textos y ejemplos */
+.texto-ejemplo {
+  border: 1px solid #ddd;
+}
+
+.em-ejemplo {
+  background-color: #2196f3;
+}
+
+.rem-ejemplo {
+  background-color: #9c27b0;
+}
+
+/* Ajustes generales */
+section {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+.descripcion {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  :root {
+    /* Reduce el tamaño base en pantallas pequeñas */
+    /* Todos los rem se ajustarán proporcionalmente */
+    font-size: 14px;
+  }
+
+  .porcentaje-contenedor {
+    /* Cambia a ancho completo en móviles */
+    width: 100%;
+  }
+}
+/* Estilos de sección y elementos base */
+.unidad-seccion {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ejemplo-contenedor {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+/* Estilos base para todas las cajas */
+.caja {
+  display: inline-block;
+  margin: 1rem;
+  text-align: center;
+  background: #4caf50;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la tarjeta */
+.card-container {
+  padding: 1rem;
+}
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.texto-ejemplo {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.texto-base h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+/* Ajustes para viewport */
+.viewport-demo {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.texto-ejemplo {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+/* Ajuste para el texto base */
+.texto-base h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Ajustes para viewport */
+.viewport-demo {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+/* Ajustes para porcentajes */
+.porcentaje-contenedor {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.porcentaje-100,
+.porcentaje-50,
+.porcentaje-25 {
+  padding: 1rem;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+}
+h1,
+h2,
+h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+.descripcion {
+  color: #666;
+  margin: 1rem 0;
+}
+/* Colores específicos para ejemplos */
+.color-nombre-1,
+.color-nombre-2,
+.color-nombre-3,
+.color-hex-1,
+.color-hex-2,
+.color-hex-3,
+.color-rgb-1,
+.color-rgb-2,
+.color-rgb-3 {
+  background: #4caf50;
+}

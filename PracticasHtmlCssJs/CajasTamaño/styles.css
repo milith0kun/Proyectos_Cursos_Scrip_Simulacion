@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+.box {
+  width: 150px; /* solo declara el Contenido */
+  height: 150px; /*solo declara el Contenido */
+  margin: 10px;
+  padding: 0;
+  background: #ff0000; /* rojo usando código hexadecimal */
+  border: 1px solid black; /* Complete border definition */
+}
+.box-modified {
+  box-sizing: border-box;
+  padding: 30px;
+  border: 10px solid black;
+}
+.box-nada {
+  width: 180px;
+  height: 200px;
+  padding: 50px;
+
+  border: 10px solid black;
+}

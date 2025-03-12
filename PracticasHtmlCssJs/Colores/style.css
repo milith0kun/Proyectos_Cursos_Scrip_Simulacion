@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #666;
+  margin: 20px 0;
+}
+
+.seccion {
+  margin-bottom: 40px;
+}
+
+.caja {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* Colores por nombre */
+.color-nombre-1 {
+  background-color: red;
+}
+.color-nombre-2 {
+  background-color: blue;
+}
+.color-nombre-3 {
+  background-color: green;
+}
+
+/* Colores hexadecimales (#)
+   - Usa 6 dígitos hexadecimales: #RRGGBB
+   - RR: Cantidad de rojo (00-FF)
+   - GG: Cantidad de verde (00-FF)
+   - BB: Cantidad de azul (00-FF)
+   - Ejemplo: #FF0000 = Rojo puro
+*/
+.color-hex-1 { background-color: #FF5733; }
+.color-hex-2 { background-color: #33FF57; }
+.color-hex-3 { background-color: #3357FF; }
+
+/* Colores RGB (Red, Green, Blue)
+   - Usa valores de 0 a 255 para cada canal
+   - rgb(rojo, verde, azul)
+   - 0 = sin color, 255 = máxima intensidad
+   - Ejemplo: rgb(255, 0, 0) = Rojo puro
+*/
+.color-rgb-1 { background-color: rgb(255, 87, 51); }
+.color-rgb-2 { background-color: rgb(51, 255, 87); }
+.color-rgb-3 { background-color: rgb(51, 87, 255); }
+
+/* Colores HSL (Hue, Saturation, Lightness)
+   - Hue: Tono del color (0-360 grados)
+       0/360° = rojo
+       120° = verde
+       240° = azul
+   - Saturation: Intensidad del color (0-100%)
+       0% = gris
+       100% = color puro
+   - Lightness: Luminosidad (0-100%)
+       0% = negro
+       50% = color normal
+       100% = blanco
+*/
+.color-hsl-1 { background-color: hsl(0, 100%, 50%); }
+.color-hsl-2 { background-color: hsl(120, 100%, 50%); }
+.color-hsla { background-color: hsla(240, 100%, 50%, 0.5); }
+.color-rgba-1 {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.color-rgba-2 {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+.color-rgba-3 {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+/* Gradientes */
+.gradiente-1 {
+  background: linear-gradient(45deg, #ff0000, #00ff00);
+}
+
+.gradiente-2 {
+  background: radial-gradient(circle, #ff0000, #0000ff);
+}
+
+.gradiente-3 {
+  background: linear-gradient(to right, #ff0000, #00ff00, #0000ff);
+}
+
+/* HSL y HSLA */
+.color-hsl-1 {
+  background-color: hsl(0, 100%, 50%);
+}
+.color-hsl-2 {
+  background-color: hsl(120, 100%, 50%);
+}
+.color-hsla {
+  background-color: hsla(240, 100%, 50%, 0.5);
+}
+
+/* Efectos hover para interactividad */
+.caja:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Media query para responsividad */
+@media (max-width: 768px) {
+  .caja {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .caja {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

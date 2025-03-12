@@ -1,0 +1,47 @@
+.table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  border: 1px solid #dbe2ef;
+  padding: 12px;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+th {
+  background-color: #9f8383;
+  color: white;
+  font-weight: 700;
+}
+
+td {
+  background-color: white;
+}
+
+tr:hover td {
+  background-color: #ffe3e3;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    margin: 10px 0;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}

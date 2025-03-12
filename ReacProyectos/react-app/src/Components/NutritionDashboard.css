@@ -1,0 +1,95 @@
+.nutrition-dashboard {
+  min-height: 100vh;
+  background-color: #f9f7f7;
+}
+
+.nutrition-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #3f72af;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.nutrition-header.hidden {
+  transform: translateY(-100%);
+}
+
+.hero-section {
+  height: 93vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.horizontal-sections {
+  padding: 70px 60px;
+  background-color: #dbe2ef;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.tip-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .nutrition-header {
+    height: 60px;
+  }
+
+  .horizontal-sections {
+    padding: 40px 20px;
+  }
+
+  .hero-section {
+    height: 70vh;
+    margin-top: 60px;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .nutrition-header h1 {
+    font-size: 1.4em;
+  }
+
+  .hero-section h2 {
+    font-size: 1.8rem;
+  }
+}

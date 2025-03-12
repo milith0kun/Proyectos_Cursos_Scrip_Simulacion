@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.formulario-contacto {
+    background-color: #242424;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.formulario-contacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #0066ff, #00ff99, #0066ff);
+    background-size: 200% 100%;
+    animation: gradientBorder 3s linear infinite;
+}
+
+@keyframes gradientBorder {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}
+
+.campo-formulario {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.campo-formulario i {
+    color: #0066ff;
+    margin-right: 8px;
+}
+
+input:focus ~ label i,
+textarea:focus ~ label i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+button {
+    background: linear-gradient(45deg, #0066ff, #00ff99);
+    background-size: 200% 100%;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-position: 100% 0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+}
+
+/* Efecto de carga al enviar */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Animación de entrada para los campos */
+.campo-formulario {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar retraso a cada campo */
+.campo-formulario:nth-child(1) { animation-delay: 0.1s; }
+.campo-formulario:nth-child(2) { animation-delay: 0.2s; }
+.campo-formulario:nth-child(3) { animation-delay: 0.3s; }
+.campo-formulario:nth-child(4) { animation-delay: 0.4s; }
+
+/* Mensaje de validación personalizado */
+input:invalid:focus,
+textarea:invalid:focus {
+    border-color: #ff4444;
+}
+
+/* Efecto de brillo en hover */
+.formulario-contacto:hover {
+    box-shadow: 0 12px 40px rgba(0, 102, 255, 0.2);
+}
+h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.campo-formulario {
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    color: #888;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+.campo-formulario:focus-within label {
+    color: #0066ff;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #2d2d2d;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+input::placeholder, textarea::placeholder {
+    color: #888;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #0066ff;
+    box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2);
+    background-color: #333;
+}
+textarea {
+    resize: none;
+    min-height: 150px;
+}
+button {
+    width: 100%;
+    padding: 16px;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background-color: #0052cc;
+    transform: translateY(-2px);
+}
+/* Estilo para la barra de progreso azul */
+textarea:focus {
+    background-image: linear-gradient(to right, #0066ff 50%, transparent 50%);
+    background-size: 200% 2px;
+    background-position: top;
+    background-repeat: no-repeat;
+    animation: loading 2s linear infinite;
+}
+@keyframes loading {
+    0% { background-position: right top; }
+    100% { background-position: left top; }
+}
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .formulario-contacto {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+}
