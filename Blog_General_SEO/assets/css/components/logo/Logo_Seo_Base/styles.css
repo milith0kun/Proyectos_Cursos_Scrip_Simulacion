@@ -1,0 +1,75 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -25px;
+    padding: 0;
+    max-width: 200px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.letter {
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.8rem;
+    position: relative;
+    display: inline-block;
+    padding: 0.02em;
+    transform-style: preserve-3d;
+}
+
+.letter:nth-child(2) {
+    font-size: 3.2rem;
+    z-index: 2;
+    transform: translateZ(20px);
+}
+
+.letter .text {
+    position: relative;
+    display: block;
+    color: white;
+    -webkit-text-stroke: 3.5px black;
+    text-stroke: 3.5px black;
+    text-shadow: 
+        2px 2px 0 #d1d1d1,
+        3px 3px 0 #c0c0c0,
+        4px 4px 0 #b0b0b0,
+        5px 5px 0 #a0a0a0,
+        6px 6px 0 #909090,
+        4px 8px 10px rgba(0,0,0,0.5),
+        6px 12px 25px rgba(0,0,0,0.3);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateZ(0) translateX(0) translateY(0) rotateY(0deg) rotateX(0deg);
+    }
+    25% {
+        transform: translateZ(25px) translateX(10px) translateY(-8px) rotateY(3deg) rotateX(-2deg);
+    }
+    50% {
+        transform: translateZ(35px) translateX(15px) translateY(-12px) rotateY(5deg) rotateX(-3deg);
+    }
+    75% {
+        transform: translateZ(25px) translateX(10px) translateY(-8px) rotateY(3deg) rotateX(-2deg);
+    }
+}
+
+.letter {
+    animation: float 8s ease-in-out infinite;
+}
+
+.letter:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.letter:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.letter:hover {
+    transform: scale(1.15) translateX(15px) translateY(-15px) translateZ(60px) rotateY(8deg) rotateX(-5deg);
+    z-index: 10;
+}

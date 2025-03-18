@@ -1,0 +1,61 @@
+{
+    "articles": [
+        {
+            "id": "1",
+            "title": "Fundamentos de SEO que todo sitio web debe implementar",
+            "slug": "fundamentos-seo-sitio-web",
+            "excerpt": "Descubre los elementos básicos que no pueden faltar en tu estrategia de posicionamiento web para obtener resultados efectivos.",
+            "content": "El SEO (Search Engine Optimization) es fundamental para cualquier presencia online exitosa...",
+            "author": {
+                "id": "1",
+                "name": "Carlos Rodríguez",
+                "role": "SEO Specialist",
+                "avatar": "/assets/images/team/carlos.jpg"
+            },
+            "category": "SEO",
+            "tags": ["SEO básico", "Optimización web", "Estrategia digital"],
+            "publishDate": "2023-05-15",
+            "updateDate": "2023-06-01",
+            "featuredImage": "/assets/images/articles/seo-basics.jpg",
+            "readTime": 8
+        },
+        {
+            "id": "2",
+            "title": "Cómo crear una estrategia de marketing de contenidos que convierta",
+            "slug": "estrategia-marketing-contenidos",
+            "excerpt": "Aprende a desarrollar contenido que no solo atraiga tráfico, sino que también genere conversiones y fidelice a tu audiencia.",
+            "content": "El marketing de contenidos es más que solo crear y publicar contenido...",
+            "author": {
+                "id": "2",
+                "name": "Laura Martínez",
+                "role": "Content Strategist",
+                "avatar": "/assets/images/team/laura.jpg"
+            },
+            "category": "Marketing",
+            "tags": ["Marketing de contenidos", "Conversión", "Estrategia"],
+            "publishDate": "2023-06-02",
+            "updateDate": null,
+            "featuredImage": "/assets/images/articles/content-marketing.jpg",
+            "readTime": 12
+        },
+        {
+            "id": "3",
+            "title": "Optimización del rendimiento web: Factores clave para el SEO",
+            "slug": "optimizacion-rendimiento-web-seo",
+            "excerpt": "Explora cómo la velocidad de carga y otros aspectos técnicos impactan directamente en el posicionamiento de tu sitio.",
+            "content": "El rendimiento web se ha convertido en un factor crucial para el SEO...",
+            "author": {
+                "id": "3",
+                "name": "Miguel Sánchez",
+                "role": "Technical SEO",
+                "avatar": "/assets/images/team/miguel.jpg"
+            },
+            "category": "Desarrollo Web",
+            "tags": ["Rendimiento web", "SEO técnico", "Optimización"],
+            "publishDate": "2023-06-20",
+            "updateDate": null,
+            "featuredImage": "/assets/images/articles/web-performance.jpg",
+            "readTime": 10
+        }
+    ]
+}

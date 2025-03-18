@@ -1,0 +1,44 @@
+{
+    "categories": [
+        {
+            "id": "1",
+            "name": "SEO",
+            "slug": "seo",
+            "description": "Aprende las mejores prácticas y estrategias de optimización para motores de búsqueda.",
+            "icon": "fa-search",
+            "color": "#2c7ae7"
+        },
+        {
+            "id": "2",
+            "name": "Marketing Digital",
+            "slug": "marketing-digital",
+            "description": "Estrategias y tácticas para mejorar tu presencia digital y alcanzar a tu audiencia objetivo.",
+            "icon": "fa-bullhorn",
+            "color": "#ff6b6b"
+        },
+        {
+            "id": "3",
+            "name": "Desarrollo Web",
+            "slug": "desarrollo-web",
+            "description": "Aspectos técnicos y mejores prácticas para optimizar el rendimiento de tu sitio web.",
+            "icon": "fa-code",
+            "color": "#6c757d"
+        },
+        {
+            "id": "4",
+            "name": "Analítica Web",
+            "slug": "analitica-web",
+            "description": "Métricas, herramientas y análisis para medir y mejorar el rendimiento de tu sitio.",
+            "icon": "fa-chart-line",
+            "color": "#20c997"
+        },
+        {
+            "id": "5",
+            "name": "Content Marketing",
+            "slug": "content-marketing",
+            "description": "Estrategias para crear y distribuir contenido valioso que atraiga y retenga a tu audiencia.",
+            "icon": "fa-pen-fancy",
+            "color": "#fd7e14"
+        }
+    ]
+}

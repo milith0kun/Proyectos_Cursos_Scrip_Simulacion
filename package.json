@@ -1,6 +1,25 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "react-router-dom": "^7.2.0"
-  }
+    "react-router-dom": "^7.2.0",
+    "three": "^0.174.0"
+  },
+  "name": "programacion-fuera-de-la-u",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene una colección de proyectos y prácticas de desarrollo web, organizados por tecnologías y conceptos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milith0kun/Proyectos_Cursos_Scrip_Simulacion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milith0kun/Proyectos_Cursos_Scrip_Simulacion/issues"
+  },
+  "homepage": "https://github.com/milith0kun/Proyectos_Cursos_Scrip_Simulacion#readme"
 }

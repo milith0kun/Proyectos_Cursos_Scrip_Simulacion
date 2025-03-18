@@ -1,0 +1,214 @@
+.particles-container {
+    position: relative;
+    width: 140px;
+    height: 65px;
+    overflow: hidden;
+    background: transparent;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    position: absolute;
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(0.45);
+}
+
+.rotating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    transform-origin: center center;
+    transform: translateX(-5px);
+}
+
+.element {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    z-index: 2;
+    will-change: transform;
+    transform-origin: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    color: #3b82f6;
+    font-size: 16px;
+    filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.5));
+    transition: all 0.3s ease-out;
+    opacity: 0.9;
+    will-change: transform, filter, opacity;
+}
+
+/* Estilos optimizados para cada icono */
+.search .icon {
+    color: #3b82f6;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+.analytics .icon {
+    color: #60a5fa;
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
+}
+
+.globe .icon {
+    color: #2563eb;
+    text-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+}
+
+.keywords .icon {
+    color: #38bdf8;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+.content .icon {
+    color: #0ea5e9;
+    text-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+}
+
+/* Cola de partículas mejorada */
+.trail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 28px;
+    width: 0;
+    opacity: 0;
+    background: linear-gradient(90deg, 
+        rgba(59, 130, 246, 1) 0%, 
+        rgba(59, 130, 246, 0.95) 5%,
+        rgba(59, 130, 246, 0.85) 15%,
+        rgba(59, 130, 246, 0.6) 35%,
+        rgba(59, 130, 246, 0.3) 65%,
+        rgba(59, 130, 246, 0.1) 85%,
+        transparent 100%
+    );
+    transform-origin: 0 50%;
+    will-change: width, height, opacity, transform;
+    transition: all 0.01s linear;
+    border-radius: 14px 2px 2px 14px;
+    filter: blur(2px);
+    pointer-events: none; /* Evita colisiones con las colas */
+}
+
+.particle-trail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.trail-mark {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        rgba(59, 130, 246, 0.15) 0%,
+        rgba(59, 130, 246, 0.1) 35%,
+        rgba(59, 130, 246, 0.05) 65%,
+        transparent 10%
+    );
+    opacity: 0.3;
+    pointer-events: none;
+    transition: opacity 2s ease-out;
+}
+
+.trail.fast {
+    width: 180px;
+    height: 24px;
+    opacity: 1;
+}
+
+.trail.medium {
+    width: 140px;
+    height: 16px;
+    opacity: 0.95;
+}
+
+.trail.slow {
+    width: 100px;
+    height: 10px;
+    opacity: 0.9;
+}
+
+
+
+.trail.medium {
+    width: 60px;
+    opacity: 0.95;
+}
+
+.trail.slow {
+    width: 40px;
+    opacity: 0.9;
+}
+
+/* Personalización de colas por tipo de icono con mejor visibilidad */
+.search .trail { 
+    background: linear-gradient(90deg, 
+        rgba(59, 130, 246, 1) 0%,
+        rgba(59, 130, 246, 0.9) 40%,
+        rgba(59, 130, 246, 0.4) 80%,
+        transparent 100%
+    );
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+.analytics .trail { 
+    background: linear-gradient(90deg, 
+        rgba(96, 165, 250, 1) 0%,
+        rgba(96, 165, 250, 0.9) 40%,
+        rgba(96, 165, 250, 0.4) 80%,
+        transparent 100%
+    );
+    box-shadow: 0 0 12px rgba(96, 165, 250, 0.6);
+}
+
+.globe .trail { 
+    background: linear-gradient(90deg, 
+        rgba(37, 99, 235, 1) 0%,
+        rgba(37, 99, 235, 0.9) 40%,
+        rgba(37, 99, 235, 0.4) 80%,
+        transparent 100%
+    );
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+}
+
+/* Efecto hover mejorado */
+.element:hover .icon {
+    filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.8));
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+@keyframes iconPulse {
+    0%, 100% { 
+        opacity: 0.9;
+        filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.5));
+    }
+    50% { 
+        opacity: 1;
+        filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.7));
+    }
+}
+
+.icon {
+    animation: iconPulse 3s ease-in-out infinite;
+}

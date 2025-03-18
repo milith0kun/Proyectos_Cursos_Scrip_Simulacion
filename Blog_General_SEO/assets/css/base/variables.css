@@ -1,0 +1,26 @@
+:root {
+    /* Colores principales */
+    --primary-blue: #0066cc;
+    --secondary-blue: #003d99;
+    --accent-blue: #00a8ff;
+    
+    /* Colores de acento */
+    --accent-green: #00cc88;
+    --accent-purple: #6c63ff;
+    --accent-orange: #ff6b6b;
+    
+    /* Colores neutros */
+    --neutral-dark: #2d3436;
+    --neutral-gray: #636e72;
+    --neutral-light: #b2bec3;
+    
+    /* Variables de animación */
+    --animation-speed: 0.3s;
+    --particle-size: 24px;
+    --logo-circle-size: 180px;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}

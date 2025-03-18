@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo 3D SEO - Digital Ecosystem</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="canvas-container"></div>
+        <div class="overlay">
+            <div class="icon-grid">
+                <i class="fas fa-search" data-tooltip="Search Optimization"></i>
+                <i class="fas fa-chart-line" data-tooltip="Analytics"></i>
+                <i class="fas fa-globe" data-tooltip="Global Reach"></i>
+                <i class="fas fa-shopping-cart" data-tooltip="E-commerce"></i>
+                <i class="fas fa-bullseye" data-tooltip="Target Marketing"></i>
+                <i class="fas fa-mobile-alt" data-tooltip="Mobile First"></i>
+            </div>
+
+            <div class="info-panel">
+                <div class="glow-effect"></div>
+                <h1 class="seo-title">SEO</h1>
+                <p class="subtitle">Digital Ecosystem Optimization</p>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="textColor">Color Texto:</label>
+                    <input type="color" id="textColor" value="#2962ff">
+                </div>
+                <div class="control-group">
+                    <label for="particleColor">Color Partículas:</label>
+                    <input type="color" id="particleColor" value="#00ff88">
+                </div>
+                <div class="control-group">
+                    <label for="particleSize">Tamaño Partículas:</label>
+                    <input type="range" id="particleSize" min="0.01" max="0.2" step="0.01" value="0.05">
+                </div>
+                <div class="control-group">
+                    <label for="particleCount">Cantidad Partículas:</label>
+                    <input type="range" id="particleCount" min="100" max="2000" step="100" value="1000">
+                </div>
+                <div class="control-group">
+                    <label for="rotationSpeed">Velocidad:</label>
+                    <input type="range" id="rotationSpeed" min="0" max="0.1" step="0.001" value="0.005">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "./node_modules/three/build/three.module.js",
+            "three/examples/jsm/": "./node_modules/three/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js.js"></script>
+</body>
+</html>

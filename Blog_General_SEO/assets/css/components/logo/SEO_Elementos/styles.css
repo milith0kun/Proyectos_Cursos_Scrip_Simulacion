@@ -1,0 +1,177 @@
+.logo-container {
+    width: 220px;          /* Ancho total del contenedor del logo */
+    height: 90px;           /* Error: debería ser 80px - Altura total del contenedor */
+    display: flex;         /* Hace que los elementos internos sean flexibles */
+    justify-content: center; /* Centra horizontalmente las letras */
+    align-items: center;   /* Centra verticalmente las letras */
+    gap: 10px;            /* Espacio entre cada letra */
+    padding: 20px;        /* Espacio interno del contenedor */
+    background: #ffffff;   /* Fondo negro del contenedor */
+    border-radius:20px;   /* Bordes redondeados del contenedor */
+    box-shadow: 0 0 60px rgba(0,0,0,0.9); /* Sombra exterior negra - crea profundidad */
+}
+
+.letter {
+    position: relative;    /* Permite posicionar elementos internos absolutamente */
+    width: 65px;          /* Ancho de cada letra */
+    height: 65px;         /* Altura de cada letra */
+    margin: 0 -2px;       /* Ajusta el espacio horizontal entre letras */
+    filter: drop-shadow(0 0 20px rgba(77, 127, 255, 0.8)); /* Efecto de brillo azul exterior */
+}
+
+.letter .outer-circle,
+.letter .inner-circle {
+    position: absolute;    /* Posicionamiento absoluto dentro de .letter */
+    border: 4px solid #000; /* Borde negro que define el contorno */
+    background: #4d7fff;   /* Color azul de relleno */
+    box-shadow:            /* Efectos de brillo: */
+        0 0 35px #4d7fff, /* Brillo exterior azul */
+        inset 0 0 25px rgba(255,255,255,0.8); /* Brillo interior blanco */
+}
+
+/* Letra S */
+.letter.s .outer-circle {
+    width: 65px;          /* Ancho del círculo exterior */
+    height: 72px;         /* Altura del círculo exterior */
+    border-radius: 35px;  /* Redondeo de bordes */
+    transform: rotate(-2deg); /* Rotación para estilo */
+    clip-path: polygon(    /* Forma la S recortando el círculo */
+        20% 0, 100% 0, 100% 35%,  /* Parte superior */
+        40% 48%,                   /* Punto medio superior */
+        100% 65%, 100% 100%,      /* Parte inferior derecha */
+        20% 100%, 0 100%, 0 65%,  /* Parte inferior izquierda */
+        60% 52%,                   /* Punto medio inferior */
+        0 35%, 0 0                 /* Parte superior izquierda */
+    );
+    transition: transform 0.3s ease; /* Suaviza la animación al hover */
+}
+
+.letter.s .inner-circle {
+    width: 50px;
+    height: 55px;
+    border-radius: 30px;
+    top: 8px;
+    left: 8px;
+    transform: rotate(-8deg);
+    clip-path: polygon(
+        30% 5%, 95% 5%, 95% 30%,
+        50% 43%,
+        95% 60%, 95% 95%,
+        30% 95%, 5% 95%, 5% 60%,
+        50% 57%,
+        5% 30%, 5% 5%
+    );
+    transition: transform 0.3s ease;
+}
+
+/* Add highlight effect */
+.letter.s::after {
+    content: '';          /* Necesario para pseudo-elementos */
+    position: absolute;   /* Posicionamiento absoluto para el brillo */
+    top: 10px;           /* Posición del brillo */
+    left: 10px;
+    width: 15px;         /* Tamaño del efecto de brillo */
+    height: 15px;
+    background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 70%); /* Gradiente circular para el brillo */
+    border-radius: 50%;  /* Hace el brillo circular */
+    box-shadow: 0 0 15px rgba(255,255,255,0.5); /* Difumina el brillo */
+}
+/* Letra E */
+.letter.e .outer-circle {
+    width: 65px;
+    height: 70px;
+    border-radius: 35px;
+    transform: rotate(-5deg);
+    clip-path: polygon(
+        0 0, 100% 0,
+        100% 25%, 30% 25%,
+        30% 45%, 85% 45%,
+        85% 55%, 30% 55%,
+        30% 75%, 100% 75%,
+        100% 100%, 0 100%
+    );
+    transition: transform 0.3s ease;
+}
+
+.letter.e .inner-circle {
+    width: 50px;
+    height: 55px;
+    border-radius: 30px;
+    top: 8px;
+    left: 8px;
+    transform: rotate(-5deg);
+    clip-path: polygon(
+        10% 5%, 90% 5%,
+        90% 20%, 35% 20%,
+        35% 47%, 80% 47%,
+        80% 53%, 35% 53%,
+        35% 80%, 90% 80%,
+        90% 95%, 10% 95%
+    );
+    transition: transform 0.3s ease;
+}
+
+/* Add highlight effect for E */
+.letter.e::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+/* Letra O */
+.letter.o .outer-circle {
+    width: 65px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+.letter.o .inner-circle {
+    width: 20px;
+    height:25px;
+    border-radius: 25px;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 15px rgba(255,255,255,0.4);
+}
+
+.letter.o .highlight {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+@keyframes glow {
+    0%, 100% {           /* Estado inicial y final */
+        filter: brightness(1) drop-shadow(0 0 25px rgba(77, 127, 255, 0.9));
+    }
+    50% {                /* Estado medio de la animación */
+        filter: brightness(1.5) drop-shadow(0 0 35px rgba(77, 127, 255, 1));
+    }
+}
+
+.letter {
+    animation: glow 3s ease-in-out infinite; /* Aplica la animación de brillo */
+}
+
+.letter:nth-child(2) {
+    animation-delay: 0.3s; /* Retrasa la animación de la segunda letra */
+}
+
+.letter:nth-child(3) {
+    animation-delay: 0.6s; /* Retrasa la animación de la tercera letra */
+}
+
+.letter:hover {
+    transform: scale(1.15);        /* Aumenta el tamaño al hover */
+    transition: transform 0.3s ease; /* Suaviza la transición */
+}
