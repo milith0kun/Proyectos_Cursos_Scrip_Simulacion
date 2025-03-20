@@ -24,8 +24,8 @@
 .letter .text {
     position: relative;          /* Posiciona el elemento relativo a su posición normal */
     display: block;             /* Hace que el elemento sea de nivel bloque */
-    color: #3b82f6;            /* Establece el color del texto a azul - CAMBIAR AQUÍ PARA MODIFICAR COLOR BASE */
-    background: linear-gradient(135deg,  /* Crea un fondo con gradiente diagonal */
+    color: #1e40af;            /* Establece el color del texto a azul #3b82f6  - CAMBIAR AQUÍ PARA MODIFICAR COLOR BASE */
+    background: linear-gradient(135deg,  /* Crea un fondo con gradiente diagonal#3b82f6 */
         #ffffff 0%,            /* Comienza con blanco */
         #93c5fd 25%,          /* Azul claro al 25% - CAMBIAR PARA MODIFICAR GRADIENTE */
         #60a5fa 50%,          /* Azul medio al 50% - CAMBIAR PARA MODIFICAR GRADIENTE */

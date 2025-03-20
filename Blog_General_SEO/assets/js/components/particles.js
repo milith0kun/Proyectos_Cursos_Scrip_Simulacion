@@ -45,13 +45,14 @@ class ParticleSystem {
         this.elements = document.querySelectorAll('.element');
         this.bounds = this.container.getBoundingClientRect();
         
+        // Adjust center point calculation
         const letterE = document.querySelector('.letter:nth-child(2)');
         const eBounds = letterE.getBoundingClientRect();
         const containerBounds = this.container.getBoundingClientRect();
         
         this.centerPoint = {
             x: (eBounds.left + eBounds.width / 2) - containerBounds.left,
-            y: (eBounds.top + eBounds.height / 2) - containerBounds.top
+            y: (eBounds.top + eBounds.height / 2) - containerBounds.top - 35 // Increased upward offset
         };
         
         this.particles = [];
@@ -128,28 +129,56 @@ class ParticleSystem {
             }
 
             // Transiciones de fase
-            if (particle.phase === 'entering' && distanceToCenter < 60) {
+            if (particle.phase === 'entering' && distanceToCenter < 80) { // Increased detection radius
                 particle.phase = 'bouncing';
-                particle.maxSpeed = 2;
-                particle.maxForce = 0.3;
-            } else if (particle.phase === 'bouncing' && particle.timeInPhase > 120) {
+                particle.maxSpeed = 2.5; // Increased speed
+                particle.maxForce = 0.35;
+            } else if (particle.phase === 'bouncing' && particle.timeInPhase > 100) { // Reduced transition time
                 particle.phase = 'positioning';
-                particle.maxSpeed = 0.6;
-                particle.maxForce = 0.15;
+                particle.maxSpeed = 0.8;
+                particle.maxForce = 0.2;
                 
-                // Posiciones finales alrededor de las letras
-                const letterSpacing = 20;
-                const particlesPerLetter = Math.ceil(this.particles.length / 3); // 3 letras
+                // Adjust final positions around letters
+                const letterSpacing = 30; // Increased spacing between letters
+                const particlesPerLetter = Math.ceil(this.particles.length / 3);
                 const letterIndex = Math.floor(index / particlesPerLetter);
                 const angleOffset = (index % particlesPerLetter) / particlesPerLetter * Math.PI * 2;
                 
                 const letterPositions = [
-                    {x: this.centerPoint.x - letterSpacing, y: this.centerPoint.y}, // S
-                    {x: this.centerPoint.x, y: this.centerPoint.y},                 // E
-                    {x: this.centerPoint.x + letterSpacing, y: this.centerPoint.y}  // O
+                    {x: this.centerPoint.x - letterSpacing, y: this.centerPoint.y - 5}, // S
+                    {x: this.centerPoint.x, y: this.centerPoint.y - 5},                 // E
+                    {x: this.centerPoint.x + letterSpacing, y: this.centerPoint.y - 5}  // O
                 ];
                 
-                const radius = 15 + Math.random() * 5;
+                const radius = 20 + Math.random() * 8; // Increased orbit radius
+                particle.targetPosition = {
+                    x: letterPositions[letterIndex].x + Math.cos(angleOffset) * radius,
+                    y: letterPositions[letterIndex].y + Math.sin(angleOffset) * radius
+                };
+            }
+
+            // Adjust phase transitions and positioning
+            if (particle.phase === 'entering' && distanceToCenter < 60) {
+                particle.phase = 'bouncing';
+                particle.maxSpeed = 2;
+                particle.maxForce = 0.3;
+            } else if (particle.phase === 'bouncing' && particle.timeInPhase > 100) {
+                particle.phase = 'positioning';
+                particle.maxSpeed = 0.6;
+                particle.maxForce = 0.15;
+                
+                const letterSpacing = 25; // Reduced spacing
+                const particlesPerLetter = Math.ceil(this.particles.length / 3);
+                const letterIndex = Math.floor(index / particlesPerLetter);
+                const angleOffset = (index % particlesPerLetter) / particlesPerLetter * Math.PI * 2;
+                
+                const letterPositions = [
+                    {x: this.centerPoint.x - letterSpacing, y: this.centerPoint.y - 15}, // S
+                    {x: this.centerPoint.x, y: this.centerPoint.y - 15},                 // E
+                    {x: this.centerPoint.x + letterSpacing, y: this.centerPoint.y - 15}  // O
+                ];
+                
+                const radius = 12 + Math.random() * 5; // Reduced radius for tighter orbits
                 particle.targetPosition = {
                     x: letterPositions[letterIndex].x + Math.cos(angleOffset) * radius,
                     y: letterPositions[letterIndex].y + Math.sin(angleOffset) * radius
@@ -291,5 +320,5 @@ class Particle {
     }
 }
 
-// Añadir al final del archivo
+// Remove duplicate class definitions and keep only the export at the end
 export { ParticleSystem, Queue, Vector, Particle };

@@ -1,12 +1,11 @@
 .main-header {
     background: linear-gradient(to right, #9fb5ff, rgb(233, 209, 233));
-    padding: 0.35rem 2rem;
+    padding: 1rem 2rem; /* Ajustado para mayor comodidad en dispositivos de escritorio */
     position: relative;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-    height: auto;
     min-height: 80px;
 }
 
@@ -18,13 +17,12 @@
     border-bottom: 1px solid rgba(71, 85, 105, 0.15);
     font-size: 0.875rem;
     color: #334155;
-    height: 25px;
-    top :10px ; 
+    height: 2.5rem; /* Incremento para mejor proporción */
 }
 
 .contact-info {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* Mayor espaciado para un diseño más equilibrado */
 }
 
 .contact-info span {
@@ -35,39 +33,41 @@
 
 .language-selector {
     display: flex;
-    gap: 0.5rem;
-    margin-top: -5px;
+    gap: 0.75rem;
 }
+
 .language-selector a {
-    color: #94A3B8;
+    padding: 0.5rem 1rem; /* Aumenté el padding para mejor accesibilidad */
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #1E293B;
     text-decoration: none;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
 }
 
 .language-selector a.active {
-    background: #3B82F6;
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
     color: white;
-    padding: 0.1rem 0.5rem;
-    border-radius: 3px;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.25);
+}
+
+.language-selector a:hover:not(.active) {
+    background: rgba(59, 130, 246, 0.1);
+    transform: translateY(-1px);
 }
 
 .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 0;
+    padding: 1rem 0;
     height: 50px;
 }
 
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    gap: 3rem; /* Aumenté el espacio para mayor claridad */
     align-items: center;
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -76,9 +76,9 @@
     color: #1E293B;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
     position: relative;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0; /* Ajustado el padding */
+    transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
@@ -101,21 +101,56 @@
 }
 
 .login-btn {
-    background: #3B82F6;
-    color: white !important;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    color: white;
+    padding: 0.5rem 1.25rem; /* Ajusté el padding para mayor visibilidad */
+    border-radius: 15px;
     font-weight: 600;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.login-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2563EB, #1E40AF);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .login-btn:hover {
-    background: #2563EB;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
 }
 
+.login-btn:hover::before {
+    opacity: 1;
+}
 
+.login-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ajustes para el botón de contacto en el email */
+.contact-info span {
+    padding: 0.5rem 1rem; /* Ajustado para mayor legibilidad */
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-info span:hover {
+    background: rgba(59, 130, 246, 0.2);
+    transform: translateY(-1px);
+}
 
 /* Estilos para el tooltip */
 [data-tooltip] {
@@ -133,10 +168,9 @@
     color: #E2E8F0;
     border-radius: 4px;
     font-size: 0.75rem;
-    white-space: nowrap;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -152,12 +186,25 @@
         padding: 0.5rem 1.5rem;
         min-height: 70px;
     }
-    
+
     .top-bar {
-        height: 25px;
+        height: 2rem;
     }
-    
+
     .main-nav {
-        height: 45px;
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .language-selector {
+        margin-top: 1rem;
+        justify-content: center;
     }
 }

@@ -21,44 +21,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Ecos del SEO Logo">
-                <span class="logo-text">Ecos del SEO</span>
-            </a>
-            
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="#" class="nav-link">SEO</a>
-                <a href="#" class="nav-link">Marketing</a>
-                <a href="#" class="nav-link">Desarrollo Web</a>
-                <a href="about.html" class="nav-link active">Sobre Nosotros</a>
-            </nav>
-            
-            <button class="mobile-menu-toggle" aria-label="Menú móvil">
-                <i class="fas fa-bars"></i>
-            </button>
+    <!-- Replace the current header with this -->
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="contact-info">
+                <span>📧 info@ecosdelseo.com</span>
+            </div>
+            <div class="language-selector">
+                <a href="#" class="active">ES</a>
+                <a href="#">EN</a>
+            </div>
         </div>
+        <nav class="main-nav">
+            <div class="particles-container">
+                <div class="logo-container">
+                    <div class="letter" aria-label="S"><span class="text" data-text="S">S</span><span class="fill"></span><span class="border"></span><span class="shadow"></span><span class="glow"></span><span class="highlight"></span></div>
+                    <div class="letter" aria-label="E"><span class="text" data-text="E">E</span><span class="fill"></span><span class="border"></span><span class="shadow"></span><span class="glow"></span><span class="highlight"></span></div>
+                    <div class="letter" aria-label="O"><span class="text" data-text="O">O</span><span class="fill"></span><span class="border"></span><span class="shadow"></span><span class="glow"></span><span class="highlight"></span></div>
+                </div>
+                <!-- Keep your existing nav-menu items -->
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="#" class="nav-link">SEO</a>
+                    <a href="#" class="nav-link">Marketing</a>
+                    <a href="#" class="nav-link">Desarrollo Web</a>
+                    <a href="about.html" class="nav-link active">Sobre Nosotros</a>
+                </nav>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <!-- About Hero Section -->
+    <main class="about-page">
         <section class="about-hero">
             <div class="container">
                 <div class="about-hero-content">
                     <h1>Sobre Ecos del SEO</h1>
-                    <p class="subtitle">Ayudamos a empresas y profesionales a amplificar su presencia digital mediante estrategias SEO efectivas</p>
+                    <p class="subtitle">Potenciamos tu presencia digital mediante estrategias SEO efectivas y personalizadas</p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Contáctanos</a>
+                        <a href="#story" class="btn btn-secondary">Nuestra Historia</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our Story Section -->
-        <section class="our-story">
+        <section id="story" class="our-story">
             <div class="container">
                 <div class="story-content">
                     <div class="story-image">
-                        <img src="assets/images/our-story.jpg" alt="Historia de Ecos del SEO">
+                        <img src="assets/images/our-story.jpg" alt="Historia de Ecos del SEO" loading="lazy">
                     </div>
                     <div class="story-text">
                         <h2>Nuestra Historia</h2>
@@ -187,21 +198,16 @@
                             </div>
                             
                             <div class="contact-method">
-                                <i class="fas fa-comments"></i>
-                                <h3>Redes Sociales</h3>
-                                <div class="social-links">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
+                                <i class="fas fa-phone"></i>
+                                <h3>Teléfono</h3>
+                                <p><a href="tel:+34900000000">+34 900 000 000</a></p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="contact-form-container">
                         <h3>Envíanos un mensaje</h3>
-                        <form class="contact-form">
+                        <form class="contact-form" id="contactForm">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
                                 <input type="text" id="name" name="name" required>
@@ -222,7 +228,10 @@
                                 <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar Mensaje
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -230,52 +239,58 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- Replace the current footer with this -->
+    <footer class="main-footer">
         <div class="footer-container">
-            <div class="footer-logo">
-                <img src="assets/images/logo-white.png" alt="Ecos del SEO Logo">
-                <h2 class="footer-logo-text">Ecos del SEO</h2>
-                <p class="footer-description">Estrategias efectivas para potenciar tu presencia digital y mejorar el posicionamiento de tu sitio web.</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Navegación</h3>
-                <div class="footer-links">
-                    <a href="index.html">Inicio</a>
-                    <a href="#">SEO</a>
-                    <a href="#">Marketing</a>
-                    <a href="#">Desarrollo Web</a>
-                    <a href="about.html">Sobre Nosotros</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Recursos</h3>
-                <div class="footer-links">
-                    <a href="#">Guías SEO</a>
-                    <a href="#">Herramientas</a>
-                    <a href="#">Glosario</a>
-                    <a href="#">Blog</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <div class="footer-links">
-                    <a href="mailto:info@ecosdelseo.com">info@ecosdelseo.com</a>
-                    <a href="#">Formulario de contacto</a>
+            <div class="footer-sections">
+                <div class="footer-col info">
+                    <div class="logo-container">
+                        <!-- Same SEO logo structure as header -->
+                        <div class="letter" aria-label="S"><span class="text" data-text="S">S</span><span class="fill"></span><span class="border"></span><span class="shadow"></span><span class="glow"></span><span class="highlight"></span></div>
+                        <div class="letter" aria-label="E"><span class="text" data-text="E">E</span><span class="fill"></span><span class="border"></span><span class="shadow"></span><span class="glow"></span><span class="highlight"></span></div>
+                        <div class="letter" aria-label="O"><span class="text" data-text="O">O</span><span class="fill"></span><span class="border"></span><span class="shadow"></span><span class="glow"></span><span class="highlight"></span></div>
+                    </div>
+                    <p>Estrategias efectivas para potenciar tu presencia digital y mejorar el posicionamiento de tu sitio web.</p>
                 </div>
                 
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Desarrollo Web</a></li>
+                        <li><a href="about.html">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#">Guías SEO</a></li>
+                        <li><a href="#">Herramientas</a></li>
+                        <li><a href="#">Glosario</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email">
+                        <button type="submit">Suscribirse</button>
+                    </form>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <p>&copy; 2023 Ecos del SEO. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </footer>

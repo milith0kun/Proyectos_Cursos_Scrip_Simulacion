@@ -1,32 +1,44 @@
-/* Variables primero */
-@import 'base/variables.css';
+/* ==========================================================================
+   Ecos del SEO - Main Stylesheet
+   ========================================================================== */
 
-/* Base */
+/* Base - Fundamental styles */
+@import 'base/variables.css';
 @import 'base/reset.css';
 @import 'base/typography.css';
+@import 'base/responsive.css';
 
-/* Componentes */
+/* Components - Reusable UI elements */
 @import 'components/logo.css';
+@import 'components/logo_style.css';
 @import 'components/buttons.css';
 @import 'components/cards.css';
 @import 'components/forms.css';
 @import 'components/header.css';
-@import 'components/logo_style.css';
 @import 'components/nav.css';
 @import 'components/hero.css';
 @import 'components/articles.css';
 @import 'components/sidebar.css';
 @import 'components/pagination.css';
-/* Layouts */
+@import 'components/nav_logo.css';
+@import 'components/nav_animacion.css'; 
+@import "components/Animacion_choques.css"; /* Corregido: comillas simples y sin espacios */
 
+/* Layouts - Page structure */
 @import 'layouts/footer.css';
 @import 'layouts/grid.css';
+@import 'layouts/container.css';
 
-/* Pages */
+/* Pages - Page-specific styles */
 @import 'pages/home.css';
 @import 'pages/article.css';
 @import 'pages/about.css';
+@import 'pages/contact.css';
 
-/* Utilities */
-@import 'utilities.css';
-@import 'responsive.css';
+/* Utilities - Helper classes */
+@import 'utilities/spacing.css';
+@import 'utilities/colors.css';
+@import 'utilities/animations.css';
+@import 'utilities/helpers.css';
+
+@import 'pages/article1.css';

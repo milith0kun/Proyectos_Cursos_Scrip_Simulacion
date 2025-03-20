@@ -19,19 +19,23 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="top-bar">
+    <header class="main-header" id="main-header">
+        <div class="top-bar" id="top-bar">
+            <!-- Actualización del correo en la barra superior -->
             <div class="contact-info">
-                <span>📧 info@ecosdelseo.com</span>
+                <span class="email-container">
+                    <i class="far fa-envelope" aria-hidden="true"></i>
+                    <span class="email-text" aria-label="Correo electrónico de contacto">info@ecosdelseo.com</span>
+                </span>
             </div>
             <div class="language-selector">
-                <a href="#" class="active">ES</a>
-                <a href="#">EN</a>
+                <a href="#" class="active" aria-label="Seleccionar idioma español">ES</a>
+                <a href="#" aria-label="Select English language">EN</a>
             </div>
         </div>
-        <nav class="main-nav">
-            <div class="particles-container">
-                <div class="logo-container">
+        <nav class="main-nav" id="main-nav">
+            <div class="particles-container" id="particles-container">
+                <div class="logo-container" aria-label="Logo Ecos del SEO">
                     <div class="letter" aria-label="S">
                         <span class="text" data-text="S">S</span>
                         <span class="fill"></span>
@@ -58,55 +62,78 @@
                     </div>
                 </div>
                 <div class="rotating-elements">
-                    <div class="element search" data-tooltip="Search Engine Analysis">
-                        <i class="icon fa-solid fa-magnifying-glass-chart"></i>
+                    <div class="element search" data-tooltip="Search Engine Analysis" aria-label="Search Engine Analysis">
+                        <i class="icon fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
                         <span class="trail"></span>
                     </div>
-                    <div class="element analytics" data-tooltip="Data Analytics">
-                        <i class="icon fa-solid fa-chart-line"></i>
+                    <div class="element analytics" data-tooltip="Data Analytics" aria-label="Data Analytics">
+                        <i class="icon fa-solid fa-chart-line" aria-hidden="true"></i>
                         <span class="trail"></span>
                     </div>
-                    <div class="element globe" data-tooltip="Global SEO">
-                        <i class="icon fa-solid fa-earth-americas"></i>
+                    <div class="element globe" data-tooltip="Global SEO" aria-label="Global SEO">
+                        <i class="icon fa-solid fa-earth-americas" aria-hidden="true"></i>
                         <span class="trail"></span>
                     </div>
-                    <div class="element keywords" data-tooltip="Keyword Strategy">
-                        <i class="icon fa-solid fa-tags"></i>
+                    <div class="element keywords" data-tooltip="Keyword Strategy" aria-label="Keyword Strategy">
+                        <i class="icon fa-solid fa-tags" aria-hidden="true"></i>
                         <span class="trail"></span>
                     </div>
-                    <div class="element content" data-tooltip="Content Optimization">
-                        <i class="icon fa-solid fa-file-lines"></i>
+                    <div class="element content" data-tooltip="Content Optimization" aria-label="Content Optimization">
+                        <i class="icon fa-solid fa-file-lines" aria-hidden="true"></i>
                         <span class="trail"></span>
                     </div>
-                    <div class="element mobile" data-tooltip="Mobile SEO">
-                        <i class="icon fa-solid fa-mobile-screen"></i>
+                    <div class="element mobile" data-tooltip="Mobile SEO" aria-label="Mobile SEO">
+                        <i class="icon fa-solid fa-mobile-screen" aria-hidden="true"></i>
                         <span class="trail"></span>
                     </div>
-                    <div class="element code" data-tooltip="Technical SEO">
-                        <i class="icon fa-solid fa-code"></i>
+                    <div class="element code" data-tooltip="Technical SEO" aria-label="Technical SEO">
+                        <i class="icon fa-solid fa-code" aria-hidden="true"></i>
                         <span class="trail"></span>
                     </div>
                 </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/articulos">Artículos</a></li>
-                <li><a href="/categorias">Categorías</a></li>
-                <li><a href="/contacto">Contacto</a></li>
-                <li><a href="/acceder" class="login-btn">Acceder</a></li>
+            <ul class="nav-menu" role="navigation">
+                <li><a href="/" aria-label="Ir a la página de inicio">Inicio</a></li>
+                <li><a href="/articulos" aria-label="Ver artículos">Artículos</a></li>
+                <li><a href="/categorias" aria-label="Ver categorías">Categorías</a></li>
+                <li><a href="/contacto" aria-label="Ir a la página de contacto">Contacto</a></li>
+                <li><a href="/acceder" class="login-btn" aria-label="Acceder a la cuenta">Acceder</a></li>
             </ul>
         </nav>
     </header>
+    
 
     <div class="hero-section">
+        <div class="hex-grid"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-particle"></div>
+        <div class="tech-line"></div>
+        <div class="tech-line"></div>
+        <div class="tech-line diagonal"></div>
+        <div class="tech-ecosystem"></div>
+    <div class="tech-pattern"></div>
+    <div class="collision-effect"></div>
+    <div class="data-flow"></div>
+    <!-- Add more collision points -->
+    <div class="seo-element" data-icon="&#xf002;"><!-- Search --></div>
+    <div class="seo-element" data-icon="&#xf201;"><!-- Analytics --></div>
+    <div class="seo-element" data-icon="&#xf0c1;"><!-- Links --></div>
         <h1>Ecos del SEO</h1>
         <p class="hero-subtitle">Descubre las mejores estrategias de SEO y Marketing Digital</p>
         <div class="hero-description">
             <p>Optimización web · Análisis de datos · Estrategias de contenido</p>
         </div>
+        <!-- Actualización de los botones CTA -->
         <div class="hero-cta">
-            <a href="/articulos" class="primary-btn">Explorar artículos</a>
-            <a href="/contacto" class="secondary-btn">Contactar</a>
+            <a href="/articulos" class="primary-btn">
+                <i class="fas fa-book-open"></i>
+                <span>Explorar artículos</span>
+            </a>
+            <a href="/contacto" class="secondary-btn">
+                <i class="fas fa-paper-plane"></i>
+                <span>Contactar</span>
+            </a>
         </div>
     </div>
 
@@ -116,7 +143,7 @@
         <div class="articles-grid">
             <article class="article-card">
                 <div class="article-thumbnail">
-                    <img src="assets/images/articles/seo-tecnico.jpg" alt="SEO Técnico">
+                    <img src="assets/images/placeholder.jpg" alt="SEO Técnico">
                     <div class="article-icon">
                         <i class="fas fa-code"></i>
                     </div>
@@ -131,7 +158,7 @@
                     <h3>Core Web Vitals: La Guía Definitiva para 2024</h3>
                     <p class="article-excerpt">Aprende a optimizar los indicadores clave de rendimiento web y mejora tu posicionamiento en Google.</p>
                     <div class="article-footer">
-                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        <a href="articles/articulo1.html" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </article>
@@ -244,10 +271,10 @@
         <div class="footer-bottom">
             <p>Copyright © 2024 Ecos del SEO. Todos los derechos reservados.</p>
             <div class="social-links">
-                <a href="#"><img src="images/social/instagram.svg" alt="Instagram"></a>
-                <a href="#"><img src="images/social/linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="images/social/twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="images/social/youtube.svg" alt="YouTube"></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
