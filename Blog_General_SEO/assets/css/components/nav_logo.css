@@ -1,27 +1,35 @@
-/* Estilos para el correo */
-.email-container {
+.contact-info {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    background: rgba(255, 255, 255, 0.1);
+    height: 22px;
+}
+
+.email-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 1rem;
+    background: rgba(59, 130, 246, 0.08);
     border-radius: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    height: 22px;
+    width: 100px;
 }
 
 .email-container:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(59, 130, 246, 0.12);
     transform: translateY(-1px);
 }
 
 .email-container i {
-    color: #3b82f6;
-    font-size: 1.1rem;
+    color: #3B82F6;
+    font-size: 0.9rem;
 }
 
 .email-text {
     font-size: 0.9rem;
-    color: #fff;
+    color: #334155;
+    font-weight: 500;
 }
 
 /* Estilos para los botones */
