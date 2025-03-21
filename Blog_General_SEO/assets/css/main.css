@@ -23,7 +23,8 @@
 @import 'components/nav_logo.css';
 @import 'components/nav_animacion.css'; 
 @import "components/Animacion_choques.css"; /* Corregido: comillas simples y sin espacios */
-
+@import 'components/Animacion_footer.css';
+@import 'components/Animacion_scrol.css';
 /* Layouts - Page structure */
 @import 'layouts/footer.css';
 @import 'layouts/grid.css';

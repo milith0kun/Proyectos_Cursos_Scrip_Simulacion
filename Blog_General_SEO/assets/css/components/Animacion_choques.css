@@ -1,9 +1,4 @@
-/* Enhanced Tech Particles Animation */
-.hero-section {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(to bottom, rgba(0, 20, 40, 0.05), rgba(0, 20, 40, 0.02));
-}
+
 
 /* Enhanced Particles */
 .tech-particle {
