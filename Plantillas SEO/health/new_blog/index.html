@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Alto Shima - Chocolate Premium </title>
+    <!-- Preconexiones para mejorar rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+     <!-- Estilos CSS -->
+     <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="as-logo">
+                        <div class="as-logo-border"></div>
+                        <div class="as-logo-text">
+                            <span class="as-logo-a">A</span>
+                            <span class="as-logo-s">S</span>
+                        </div>
+                        <div class="as-logo-pattern"></div>
+                    </div>
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="#productos" class="nav-link">Productos</a></li>
+                        <li><a href="#proceso" class="nav-link">Nuestro Proceso</a></li>
+                        <li><a href="#origen" class="nav-link">Origen</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-toggle" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="#carrito" class="cart-link" aria-label="Carrito">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" aria-label="Menú">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-label">Alto Shima Premium</span>
+                    <h1 class="hero-title">Chocolate artesanal<br>de origen único</h1>
+                    <p class="hero-subtitle">Descubre el sabor auténtico del cacao, cultivado en las tierras altas de Perú</p>
+                    <div class="hero-actions">
+                        <a href="#productos" class="btn btn-primary">Explorar Productos</a>
+                        <a href="#proceso" class="btn btn-outline">Descubre el Proceso</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Destacados -->
+        <section id="productos" class="products-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Nuestros Chocolates Premium</h2>
+                    <p class="section-subtitle">Elaborados con 70% de cacao Chuncho y los mejores ingredientes naturales</p>
+                </header>
+
+                <div class="product-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="chocolate">Chocolate Puro</button>
+                    <button class="filter-btn" data-filter="frutas">Con Frutas</button>
+                    <button class="filter-btn" data-filter="especiales">Especiales</button>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Producto 1: Chocolate Bitter -->
+                    <!-- ... código anterior ... -->
+
+                    <!-- Producto 1: Chocolate Bitter -->
+                    <article class="product-card" data-category="chocolate">
+                        <div class="product-image bitter">
+                            
+                            <div class="product-badge">Premium</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Chocolate Bitter 70% Puro</h3>
+                            <div class="product-info">
+                                <span class="product-percentage">70% Cacao Chuncho</span>
+                                <span class="product-weight">50g</span>
+                            </div>
+                            <p class="product-description">
+                                Descubre la pureza del cacao en cada bocado. Elaborado con los granos más selectos, 
+                                este chocolate 70% te ofrece una experiencia natural y auténtica para tu paladar. 
+                                Un placer divino para tus momentos especiales.
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">100% Natural</span>
+                                <span class="feature-tag">Sin aditivos</span>
+                                <span class="feature-tag">Artesanal</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$9.50</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ... código anterior ... -->
+
+                    <!-- Producto: Chocolate con Mango -->
+                    <article class="product-card" data-category="frutas">
+                        <div class="product-image mango">
+                            
+                            <div class="product-badge">Edición Especial</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Chocolate con Mango</h3>
+                            <div class="product-info">
+                                <span class="product-percentage">70% Cacao Chuncho</span>
+                                <span class="product-weight">50g</span>
+                            </div>
+                            <p class="product-description">
+                                Una armoniosa fusión entre nuestro chocolate bitter 70% y trozos selectos de mango tropical. 
+                                Una experiencia única que combina la intensidad del cacao con la dulzura natural de la fruta.
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">Fruta Natural</span>
+                                <span class="feature-tag">Sin Azúcar Añadida</span>
+                                <span class="feature-tag">Edición Limitada</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$10.50</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto: Mix de Frutas -->
+                    <article class="product-card" data-category="frutas">
+                        <div class="product-image mix-tropical">
+                            
+                            <div class="product-badge">Bestseller</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Mix Tropical Premium</h3>
+                            <div class="product-info">
+                                <span class="product-percentage">70% Cacao Chuncho</span>
+                                <span class="product-weight">50g</span>
+                            </div>
+                            <p class="product-description">
+                                Una experiencia sensorial única que combina nuestro chocolate bitter 70% 
+                                con una exquisita mezcla de mango, arándanos y piña. Un equilibrio perfecto 
+                                entre lo dulce y amargo que despertará tus sentidos.
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">Frutas Selectas</span>
+                                <span class="feature-tag">Sin Culpa</span>
+                                <span class="feature-tag">100% Natural</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$11.50</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <!-- Producto: Sal de Maras -->
+                    <article class="product-card" data-category="especiales">
+                        <div class="product-image sal-maras">
+                            
+                            <div class="product-badge">Ancestral</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Sal de Maras Premium</h3>
+                            <div class="product-info">
+                                <span class="product-percentage">70% Cacao Chuncho</span>
+                                <span class="product-weight">50g</span>
+                            </div>
+                            <p class="product-description">
+                                Una extraordinaria fusión entre la riqueza del cacao amazónico y la milenaria 
+                                sal rosada de los Andes. Una experiencia única que despierta tus sentidos con 
+                                el perfecto balance entre lo dulce, amargo y salado.
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">Rico en Minerales</span>
+                                <span class="feature-tag">Antioxidantes</span>
+                                <span class="feature-tag">Beneficios Beauty</span>
+                            </div>
+                            <div class="product-benefits">
+                                <small>✦ Fuente de magnesio, potasio y calcio</small>
+                                <small>✦ Antienvejecimiento natural</small>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$11.50</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                
+
+                    <!-- Producto: Mix de Nueces -->
+                    <article class="product-card" data-category="especiales">
+                        <div class="product-image nueces">
+                            
+                            <div class="product-badge">Cusco Premium</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Mix de Nueces & Almendras Premium</h3>
+                            <div class="product-info">
+                                <span class="product-percentage">70% Cacao Chuncho</span>
+                                <span class="product-origin">La Convención, Cusco</span>
+                                <span class="product-weight">50g</span>
+                            </div>
+                            <p class="product-description">
+                                Una experiencia sensorial única que combina nuestro chocolate bitter 70% 
+                                con una selecta mezcla de nueces y almendras. La perfecta fusión entre 
+                                lo crujiente y dulce que te brindará energía y vitalidad.
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">Energizante Natural</span>
+                                <span class="feature-tag">Origen Cusco</span>
+                                <span class="feature-tag">Mood Booster</span>
+                            </div>
+                            <div class="product-benefits">
+                                <small>✦ Energía instantánea</small>
+                                <small>✦ Actitud mental positiva</small>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$12.50</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+            
+
+                    <!-- Producto: Naranja -->
+                    <article class="product-card" data-category="frutas">
+                        <div class="product-image naranja">
+                            
+                            <div class="product-badge">Tradicional</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Naranja Tropical Premium</h3>
+                            <div class="product-info">
+                                <span class="product-percentage">70% Cacao Chuncho</span>
+                                <span class="product-weight">50g</span>
+                            </div>
+                            <p class="product-description">
+                                Descubre el equilibrio perfecto entre nuestro chocolate premium y la 
+                                frescura tropical de la naranja. Una experiencia sensorial única que 
+                                combina lo dulce y agridulce en cada bocado, creando un placer 
+                                irresistible para tus sentidos.
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">100% Natural</span>
+                                <span class="feature-tag">Sabor Tradicional</span>
+                                <span class="feature-tag">Energizante</span>
+                            </div>
+                            <div class="product-benefits">
+                                <small>✦ Energía instantánea</small>
+                                <small>✦ Mejora tu día</small>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$10.50</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Producto: Arándanos -->
+                    <article class="product-card" data-category="frutas">
+                        <div class="product-image arandanos">
+                            
+                            <div class="product-badge">Cusco Premium</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Arándanos Selectos</h3>
+                            <div class="product-info">
+                                <span class="product-percentage">70% Cacao Chuncho</span>
+                                <span class="product-origin">La Convención, Cusco</span>
+                                <span class="product-weight">50g</span>
+                            </div>
+                            <p class="product-description">
+                                Una experiencia única que fusiona nuestro chocolate bitter 70% con arándanos 
+                                deshidratados cuidadosamente seleccionados. Un equilibrio perfecto entre 
+                                lo dulce y agridulce que te transportará a un viaje sensorial inolvidable.
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">Energizante Natural</span>
+                                <span class="feature-tag">Bajo en Calorías</span>
+                                <span class="feature-tag">Origen Cusco</span>
+                            </div>
+                            <div class="product-benefits">
+                                <small>✦ Mejora tu estado de ánimo</small>
+                                <small>✦ Ideal para tu dieta</small>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$11.50</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Producto: Piña -->
+                    <article class="product-card" data-category="frutas">
+                        <div class="product-image pina">
+                            <div class="product-badge">Orgánico</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Piña Dorada Premium</h3>
+                            <div class="product-info">
+                                <span class="product-percentage">70% Cacao Chuncho</span>
+                                <span class="product-weight">50g</span>
+                            </div>
+                            <p class="product-description">
+                                Una experiencia sensorial única que fusiona nuestro chocolate bitter 70% 
+                                con la dulzura natural de la piña peruana. Un equilibrio perfecto entre 
+                                lo aromático, dulce y amargo que cautivará tus sentidos.
+                            </p>
+                            <div class="product-features">
+                                <span class="feature-tag">100% Orgánico</span>
+                                <span class="feature-tag">Fruta Nacional</span>
+                                <span class="feature-tag">Saludable</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">$11.50</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Añadir al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="products-cta">
+                    <a href="tienda.html" class="btn btn-secondary">Ver todos los productos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ... código anterior ... -->
+        <!-- Parallax Scroll Section -->
+        <section class="parallax-section">
+            <div class="parallax-content">
+                <h2 class="parallax-title">Descubre la Magia del Cacao</h2>
+                <p class="parallax-description">Un viaje sensorial desde las alturas de los Andes hasta tu paladar</p>
+            </div>
+        </section>
+
+        <!-- Proceso de Elaboración -->
+        <section id="proceso" class="process-section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">Nuestro Proceso</span>
+                    <h2 class="section-title">Del Grano a la Barra</h2>
+                    <p class="section-subtitle">Un viaje artesanal que preserva la esencia del cacao</p>
+                </header>
+
+                <div class="process-timeline">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="step-title">Selección del Grano</h3>
+                            <p class="step-description">Granos de cacao Chuncho cuidadosamente seleccionados de las tierras altas de Cusco.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3 class="step-title">Tostado Artesanal</h3>
+                            <p class="step-description">Proceso de tostado controlado que desarrolla los aromas y sabores únicos del cacao.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-mortar-pestle"></i>
+                            </div>
+                            <h3 class="step-title">Molienda y Conchado</h3>
+                            <p class="step-description">72 horas de conchado para lograr una textura sedosa y sabores intensos.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <div class="step-icon">
+                                <i class="fas fa-cookie"></i>
+                            </div>
+                            <h3 class="step-title">Moldeado y Maduración</h3>
+                            <p class="step-description">Moldeado manual y proceso de maduración controlada para un acabado perfecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Origen del Cacao -->
+        <section id="origen" class="origin-section">
+            <div class="container">
+                <div class="origin-grid">
+                    <div class="origin-image" data-aos="fade-right">
+                        <div class="origin-badge">
+                            <span>1,200m</span>
+                            <small>sobre el nivel del mar</small>
+                        </div>
+                    </div>
+                    
+                    <div class="origin-content" data-aos="fade-left">
+                        <span class="section-label">Origen</span>
+                        <h2 class="section-title">El Cacao Chuncho</h2>
+                        <p class="origin-description">Una variedad ancestral cultivada en el Valle Sagrado de los Incas, preservada por generaciones de agricultores locales.</p>
+                        
+                        <div class="origin-features">
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <h4>Notas Aromáticas</h4>
+                                <p>Perfil único de frutas y flores</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-heart"></i>
+                                <h4>Beneficios</h4>
+                                <p>Rico en antioxidantes naturales</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-hands-helping"></i>
+                                <h4>Impacto Social</h4>
+                                <p>Comercio justo y sostenible</p>
+                            </div>
+                        </div>
+
+                        <a href="#proceso" class="btn btn-outline">Conoce Nuestro Proceso</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonios -->
+        <section id="testimonios" class="testimonials-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                    <p class="section-subtitle">Experiencias de quienes han probado nuestro chocolate artesanal</p>
+                </header>
+
+                <div class="testimonials-slider">
+                    <!-- Testimonio 1 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"El chocolate de Alto Shima es simplemente excepcional. Nunca había probado un chocolate con tantos matices y un sabor tan puro. Ahora es mi regalo favorito para ocasiones especiales."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image author-image-1"></div>
+                            <div class="author-info">
+                                <h4>María Sánchez</h4>
+                                <p>Chef Pastelera</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Como amante del chocolate oscuro, puedo decir que el chocolate con sal de Maras es una obra maestra. El contraste entre lo dulce y lo salado es perfecto. ¡Totalmente recomendado!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image author-image-2"></div>
+                            <div class="author-info">
+                                <h4>Carlos Mendoza</h4>
+                                <p>Sommelier</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 3 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Descubrí Alto Shima en un viaje a Perú y quedé fascinada. Ahora compro regularmente online y la calidad sigue siendo extraordinaria. El chocolate con frutas es mi favorito."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image author-image-3"></div>
+                            <div class="author-info">
+                                <h4>Laura Torres</h4>
+                                <p>Viajera y Bloguera</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+
+
+        
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="as-logo">
+                            <div class="as-logo-text">
+                                <span class="as-logo-a">A</span>
+                                <span class="as-logo-s">S</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="brand-description">Chocolate artesanal premium elaborado con cacao Chuncho del Valle Sagrado de los Incas.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+    
+                <nav class="footer-nav">
+                    <h4 class="footer-heading">Explorar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#productos">Nuestros Chocolates</a></li>
+                        <li><a href="#proceso">Proceso Artesanal</a></li>
+                        <li><a href="#origen">Historia y Origen</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="footer-contact">
+                    <h4 class="footer-heading">Contáctanos</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>Cusco, Perú</span>
+                                <small>Valle Sagrado de los Incas</small>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span>+51 123 456 789</span>
+                                <small>Lun - Vie, 9:00 - 18:00</small>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span>info@altoshima.com</span>
+                                <small>Soporte 24/7</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p>Suscríbete para recibir noticias y ofertas exclusivas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" aria-label="Suscribirse">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <p>&copy; 2023 Alto Shima. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="terminos.html">Términos y Condiciones</a>
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+     <!-- WhatsApp Button -->
+     <a href="https://wa.me/51123456789?text=Hola,%20me%20interesa%20saber%20más%20sobre%20sus%20chocolates%20artesanales%20Alto%20Shima" 
+     class="whatsapp-button"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chatear por WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-tooltip">¿Tienes dudas? ¡Escríbenos!</span>
+    </a>
+
+            <!-- Cart Component -->
+        <div class="cart-overlay">
+            <div class="cart-sidebar">
+                <div class="cart-header">
+                    <h3 class="cart-title">Carrito de Compras <span class="cart-count">0</span></h3>
+                    <button class="close-cart" aria-label="Cerrar carrito">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="empty-cart visible">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Tu carrito está vacío</p>
+                </div>
+
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">S/ 0.00</span>
+                    </div>
+                    <button class="checkout-btn">
+                        Proceder al Pago
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/core/main.js"></script>
+</body>
+</html>

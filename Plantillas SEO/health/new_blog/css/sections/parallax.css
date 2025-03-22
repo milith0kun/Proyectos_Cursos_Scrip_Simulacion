@@ -1,0 +1,70 @@
+.parallax-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+                      url('../../assets/images/cacao-beans-rustic.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-white);
+    padding: var(--spacing-xl);
+    max-width: 1000px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.parallax-title {
+    font-family: var(--font-primary);
+    font-size: clamp(3.5rem, 7vw, 5rem);
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.parallax-description {
+    font-size: clamp(1.3rem, 2.8vw, 1.6rem);
+    line-height: 1.6;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    max-width: 90%;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .parallax-section {
+        background-attachment: scroll;
+        height: 60vh;
+    }
+    
+    .parallax-content {
+        padding: var(--spacing-lg);
+    }
+}

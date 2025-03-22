@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <!-- Metadatos mejorados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{Descripción SEO - Máximo 155 caracteres}}">
+    <meta name="keywords" content="{{Palabras clave principales}}">
+    <meta name="author" content="{{Nombre Empresa}}">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{Título del Sitio}}">
+    <meta property="og:description" content="{{Descripción SEO}}">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="color-scheme" content="light dark">
+    
+    <title>{{Título del Sitio}} | {{Descripción Corta}}</title>
+    
+    <!-- Precargas y optimizaciones -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="css/dynamic-style.css" as="style">
+    <link rel="preload" href="js/dynamic.js" as="script">
+    <link rel="preload" href="fonts/custom-font.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/dynamic-style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+</head>
+<body>
+    <!-- Enlace de accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Cabecera -->
+    <header class="header" data-component="sticky-header">
+        <div class="header-container">
+            <div class="brand">
+                <img src="img/logo.svg" alt="{{Nombre de la Empresa}}" class="logo" width="150" height="50">
+                <h1>{{Título Principal}}</h1>
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list" role="menubar">
+                    <li role="none"><a href="#servicios" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="#proceso" role="menuitem">Proceso</a></li>
+                    <li role="none"><a href="#contacto" role="menuitem">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main id="main-content" class="dynamic-container">
+        <!-- Sección Hero -->
+        <section class="hero-section" data-component="parallax">
+            <div class="hero-content">
+                <h2 class="animate-on-scroll">{{Título Principal}}</h2>
+                <p class="animate-on-scroll">{{Descripción Principal}}</p>
+                <div class="cta-group">
+                    <a href="#contacto" class="cta-button primary">Comenzar</a>
+                    <a href="#servicios" class="cta-button secondary">Ver Servicios</a>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <!-- Secciones Dinámicas -->
+        <div class="dynamic-sections" data-component="accordion">
+            <section id="servicios" class="dynamic-section" data-section="servicios">
+                <div class="section-preview">
+                    <h2>Nuestros Servicios</h2>
+                    <i class="fas fa-plus expand-icon"></i>
+                </div>
+                <div class="section-content">
+                    <div class="content-inner">
+                        <div class="service-grid">
+                            <article class="service-card" data-aos="fade-up">
+                                <i class="fas fa-code service-icon"></i>
+                                <h3>{{Título Servicio}}</h3>
+                                <p>{{Descripción Servicio}}</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="proceso" class="dynamic-section" data-section="proceso">
+                <div class="section-preview">
+                    <h2>Nuestro Proceso</h2>
+                    <i class="fas fa-plus expand-icon"></i>
+                </div>
+                <div class="section-content">
+                    <div class="content-inner">
+                        <div class="process-timeline">
+                            <!-- Elementos del timeline -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <form class="contact-form" data-component="form-validation">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Indicador de carga -->
+        <div class="loading-indicator" aria-hidden="true">
+            <div class="spinner"></div>
+            <p class="loading-text">Cargando...</p>
+        </div>
+
+        <!-- Botón volver arriba -->
+        <button class="back-to-top" aria-label="Volver arriba">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </main>
+
+    <!-- Consentimiento de Cookies -->
+    <div class="cookie-consent" hidden>
+        <p>Utilizamos cookies para mejorar tu experiencia. <a href="/politica-cookies">Más información</a></p>
+        <button class="accept-cookies">Aceptar</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>{{Nombre Empresa}}</h3>
+                    <p>{{Descripción Corta}}</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> {{email}}</li>
+                        <li><i class="fas fa-phone"></i> {{teléfono}}</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{año}} {{Nombre Empresa}}. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/components.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/dynamic.js" type="module"></script>
+    
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>

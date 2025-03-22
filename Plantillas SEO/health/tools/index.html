@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herramientas interactivas para seguimiento de salud y bienestar">
+    <meta name="keywords" content="calculadora IMC, planificador comidas, calendario ejercicios">
+    <meta name="author" content="Health & Wellness Hub">
+    
+    <title>Herramientas de Salud | Health & Wellness Hub</title>
+    
+    <link rel="stylesheet" href="css/tools-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="tools-header">
+        <nav class="nav-container">
+            <a href="../index.html" class="logo">Health & Wellness Hub</a>
+            <div class="tools-menu">
+                <a href="#calculadoras">Calculadoras</a>
+                <a href="#planificador">Planificador</a>
+                <a href="#seguimiento">Seguimiento</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tools-main">
+        <section class="tools-hero">
+            <h1>Herramientas Interactivas de Salud</h1>
+            <p>Monitorea tu progreso y alcanza tus objetivos de salud</p>
+        </section>
+
+        <section id="calculadoras" class="tools-section">
+            <h2>Calculadoras de Salud</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Calculadora IMC</h3>
+                    </div>
+                    <form class="calculator-form">
+                        <div class="form-group">
+                            <label for="peso">Peso (kg)</label>
+                            <input type="number" id="peso" required min="30" max="300">
+                        </div>
+                        <div class="form-group">
+                            <label for="altura">Altura (cm)</label>
+                            <input type="number" id="altura" required min="100" max="250">
+                        </div>
+                        <button type="submit">Calcular IMC</button>
+                    </form>
+                    <div class="result-display" hidden>
+                        <div class="result-value"></div>
+                        <div class="result-message"></div>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <i class="fas fa-fire"></i>
+                        <h3>Calorías Diarias</h3>
+                    </div>
+                    <!-- Contenido de calculadora de calorías -->
+                </div>
+            </div>
+        </section>
+
+        <section id="planificador" class="tools-section">
+            <h2>Planificador de Comidas</h2>
+            <div class="meal-planner">
+                <div class="planner-sidebar">
+                    <div class="meal-database">
+                        <h3>Alimentos Disponibles</h3>
+                        <div class="search-bar">
+                            <input type="search" placeholder="Buscar alimentos...">
+                        </div>
+                        <div class="food-list">
+                            <!-- Lista de alimentos -->
+                        </div>
+                    </div>
+                </div>
+                <div class="planner-main">
+                    <div class="week-view">
+                        <!-- Vista semanal -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="seguimiento" class="tools-section">
+            <h2>Seguimiento de Progreso</h2>
+            <div class="progress-tracker">
+                <div class="tracker-card">
+                    <h3>Peso Corporal</h3>
+                    <canvas class="progress-chart"></canvas>
+                    <button class="add-data">Añadir Registro</button>
+                </div>
+                <!-- Más trackers -->
+            </div>
+        </section>
+    </main>
+
+    <aside class="tools-sidebar">
+        <div class="user-profile">
+            <img src="img/avatar.jpg" alt="Perfil de usuario">
+            <h3>Mi Progreso</h3>
+            <div class="progress-summary">
+                <!-- Resumen de progreso -->
+            </div>
+        </div>
+    </aside>
+
+    <footer class="tools-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre las Herramientas</h3>
+                <p>Calculadoras y herramientas basadas en evidencia científica</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#ayuda">Ayuda</a></li>
+                    <li><a href="#privacidad">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/tools.js" type="module"></script>
+    <script src="js/charts.js" defer></script>
+</body>
+</html>

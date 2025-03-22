@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Logo Alto Shima - Estilo Minimalista
+   ========================================================================== */
+
+.as-logo {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.as-logo::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.as-logo::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, 
+        transparent 40%,
+        rgba(255, 215, 0, 0.1) 45%,
+        rgba(255, 215, 0, 0.2) 50%,
+        rgba(255, 215, 0, 0.1) 55%,
+        transparent 60%
+    );
+    transition: transform 0.6s ease;
+}
+
+.as-logo-text {
+    position: relative;
+    z-index: 2;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    letter-spacing: -0.5px;
+}
+
+.as-logo-a {
+    color: #DAA520;
+    transition: color 0.3s ease;
+}
+
+.as-logo-s {
+    color: #FFD700;
+    margin-left: -2px;
+    transition: color 0.3s ease;
+}
+
+/* Efectos hover */
+.as-logo:hover {
+    transform: scale(1.05);
+}
+
+.as-logo:hover::before {
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.as-logo:hover::after {
+    transform: rotate(180deg);
+}
+
+.as-logo:hover .as-logo-a {
+    color: #FFD700;
+}
+
+.as-logo:hover .as-logo-s {
+    color: #DAA520;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .as-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .as-logo-text {
+        font-size: 20px;
+    }
+}

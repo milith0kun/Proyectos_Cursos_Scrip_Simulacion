@@ -1,0 +1,26 @@
+{
+    "siteName": "{{Nombre Empresa}}",
+    "siteDescription": "{{Descripción SEO - Máximo 155 caracteres}}",
+    "contactInfo": {
+        "email": "{{email}}",
+        "phone": "{{teléfono}}",
+        "address": "{{dirección}}"
+    },
+    "socialMedia": {
+        "facebook": "{{url-facebook}}",
+        "instagram": "{{url-instagram}}",
+        "twitter": "{{url-twitter}}"
+    },
+    "services": [
+        {
+            "title": "{{Título Servicio 1}}",
+            "description": "{{Descripción Servicio 1}}",
+            "icon": "fa-code"
+        },
+        {
+            "title": "{{Título Servicio 2}}",
+            "description": "{{Descripción Servicio 2}}",
+            "icon": "fa-paint-brush"
+        }
+    ]
+}

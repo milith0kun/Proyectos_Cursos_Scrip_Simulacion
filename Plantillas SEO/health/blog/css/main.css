@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Archivo Principal de Estilos
+   ========================================================================== */
+
+/* Base */
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* Componentes */
+@import 'components/header.css';
+@import 'components/footer.css';
+@import 'components/buttons.css';
+@import 'components/forms.css';
+@import 'components/cards.css';
+@import 'components/navigation.css';
+@import 'components/testimonials.css';
+
+@import 'components/sidebar-navigation.css';
+
+/* Secciones */
+@import 'sections/hero.css';
+@import 'sections/blog.css';
+@import 'sections/recipes.css';
+@import 'sections/wellness.css';
+@import 'sections/weight-loss.css';
+@import 'sections/resources.css';
+
+/* Utilidades */
+@import 'utils/animations.css';
+@import 'utils/helpers.css';
+@import 'utils/spacing.css';
+@import 'utils/responsive.css';

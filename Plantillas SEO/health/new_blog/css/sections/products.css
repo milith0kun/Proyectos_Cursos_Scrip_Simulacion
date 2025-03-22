@@ -1,0 +1,412 @@
+.products-section {
+    padding: calc(var(--spacing-xl) * 2) 0;
+    background: linear-gradient(to bottom, #fff, #f8f8f8);
+    overflow-x: hidden; /* Previene scroll horizontal */
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 var(--spacing-xl);
+    position: relative; /* Para elementos absolutos dentro */
+}
+
+.product-card {
+    background-color: var(--color-white);
+    border-radius: 12px; /* Bordes más suaves */
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+    position: relative;
+    aspect-ratio: 1;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    min-height: 280px;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0.05) 70%, 
+        rgba(0,0,0,0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-image::after {
+    opacity: 1;
+}
+
+/* Mejora para el botón Ver todos los productos */
+.products-cta {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+}
+
+.btn-secondary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: calc(var(--spacing-xl) * 2);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-family: var(--font-primary);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.product-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-bottom: calc(var(--spacing-xl) * 1.5);
+    padding: 0 var(--spacing-md);
+}
+
+.filter-btn {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: transparent;
+    color: var(--color-gray-800);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    color: var(--color-gold-primary);
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-gold-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.filter-btn.active::after,
+.filter-btn:hover::after {
+    width: 80%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 var(--spacing-xl);
+}
+
+.product-card {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Imágenes de fondo para productos específicos */
+[data-category="chocolate"] .product-image.bitter {
+    background-image: url('../../assets/images/chocolate_bitter.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+[data-category="frutas"] .product-image.mango {
+    background-image: url('../../assets/images/Chocolate_Mango.jpg');
+}
+
+[data-category="frutas"] .product-image.mix-tropical {
+    background-image: url('../../assets/images/chocolate_frutas.jpg');
+}
+
+[data-category="especiales"] .product-image.sal-maras {
+    background-image: url('../../assets/images/chocolate_maras.jpg');
+}
+
+[data-category="especiales"] .product-image.nueces {
+    background-image: url('../../assets/images/chocolate_nueces.jpg');
+}
+
+[data-category="frutas"] .product-image.naranja {
+    background-image: url('../../assets/images/chocolate_naranja.jpg');
+}
+
+[data-category="frutas"] .product-image.arandanos {
+    background-image: url('../../assets/images/chocolate_arandanos.jpg');
+}
+
+[data-category="frutas"] .product-image.pina {
+    background-image: url('../../assets/images/chocolate_piña.jpg');
+}
+
+/* Estilos comunes para las imágenes */
+.product-image {
+    position: relative;
+    aspect-ratio: 1;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    min-height: 280px;
+    transition: transform 0.6s ease;
+}
+
+.product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-card:hover .product-image::before {
+    opacity: 1;
+}
+
+.product-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    background-color: var(--color-gold-primary);
+    color: var(--color-black);
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.product-content {
+    padding: var(--spacing-lg);
+}
+
+.product-title {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    color: var(--color-black);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.product-percentage {
+    color: var(--color-gray-800);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.product-price {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-gold-primary);
+}
+
+.product-description {
+    color: var(--color-gray-700);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    min-height: 67px;
+}
+
+.product-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-tag {
+    background-color: var(--color-gold-light);
+    color: var(--color-black);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.product-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: var(--spacing-md);
+}
+
+.product-benefits small {
+    color: var(--color-gray-600);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.product-origin {
+    font-size: 13px;
+    color: var(--color-gray-600);
+    font-style: italic;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.add-to-cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.add-to-cart-btn i {
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-card {
+        max-width: 100%;
+    }
+
+    .product-description {
+        min-height: auto;
+    }
+
+    .product-footer {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .add-to-cart-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-features {
+        justify-content: center;
+    }
+
+    .product-benefits {
+        align-items: center;
+    }
+
+    .product-info {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 0 var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .product-content {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .product-filters {
+        gap: var(--spacing-md);
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1rem;
+        font-size: 13px;
+    }
+}

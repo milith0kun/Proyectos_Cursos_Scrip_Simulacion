@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Tipografía
+   ========================================================================== */
+
+/* Títulos */
+h1, .h1 {
+    font-size: var(--font-size-mega);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-lg);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2, .h2 {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+}
+
+h3, .h3 {
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-md);
+}
+
+h4, .h4 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+}
+
+h5, .h5 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-sm);
+}
+
+h6, .h6 {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Párrafos */
+p {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.lead {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.7;
+}
+
+/* Enlaces */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-duration-normal) var(--transition-smooth);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Listas */
+ul, ol {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-xl);
+}
+
+li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Texto pequeño */
+small, .small {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-normal);
+}
+
+/* Texto en negrita */
+strong, .bold {
+    font-weight: var(--font-weight-bold);
+}
+
+/* Texto en cursiva */
+em, .italic {
+    font-style: italic;
+}
+
+/* Texto subrayado */
+u, .underline {
+    text-decoration: underline;
+}
+
+/* Texto tachado */
+s, .strikethrough {
+    text-decoration: line-through;
+}
+
+/* Citas */
+blockquote {
+    font-size: var(--font-size-lg);
+    font-style: italic;
+    border-left: var(--border-width-thick) solid var(--color-primary);
+    padding-left: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+/* Clases de utilidad para texto */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-muted { color: var(--color-text-muted); }
+.text-light { color: var(--color-text-light); }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-justify { text-align: justify; }
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+/* Fuentes especiales */
+.font-special {
+    font-family: var(--font-family-special);
+}
+
+/* Gradientes de texto */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-secondary {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1, .h1 { font-size: calc(var(--font-size-mega) * 0.8); }
+    h2, .h2 { font-size: calc(var(--font-size-xxxl) * 0.8); }
+    h3, .h3 { font-size: calc(var(--font-size-xxl) * 0.8); }
+    h4, .h4 { font-size: calc(var(--font-size-xl) * 0.8); }
+    
+    .lead {
+        font-size: var(--font-size-md);
+    }
+}
+
+@media (max-width: 480px) {
+    h1, .h1 { font-size: calc(var(--font-size-mega) * 0.6); }
+    h2, .h2 { font-size: calc(var(--font-size-xxxl) * 0.6); }
+    h3, .h3 { font-size: calc(var(--font-size-xxl) * 0.6); }
+    
+    blockquote {
+        font-size: var(--font-size-md);
+        padding-left: var(--spacing-md);
+    }
+}

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.side-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.nav-dots {
+    list-style: none;
+}
+
+.nav-dots li {
+    margin: 15px 0;
+}
+
+.nav-dots a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    transition: all 0.3s ease;
+}
+
+.nav-dots a.active {
+    background: #fff;
+    transform: scale(1.5);
+}
+
+.horizontal-container {
+    display: flex;
+    width: max-content;
+    height: 100vh;
+}
+
+.horizontal-section {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    position: relative;
+}
+
+#inicio {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+}
+
+#proyectos {
+    background: linear-gradient(45deg, #8e44ad, #9b59b6);
+}
+
+#servicios {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+#contacto {
+    background: linear-gradient(45deg, #d35400, #e67e22);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}

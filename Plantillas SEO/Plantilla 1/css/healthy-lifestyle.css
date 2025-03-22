@@ -1,0 +1,210 @@
+/* Reset de estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Mejora el control de dimensiones */
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: #FBF5DD; /* Fondo principal beige claro */
+    color: #16404D; /* Texto en azul oscuro */
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+
+/* Encabezado */
+header {
+    position: sticky; /* Mantiene el encabezado visible al desplazarse */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../images/food/DALL·E 2025-01-26 23.01.44 - Un fondo decorativo para un encabezado de página web con elementos de comida saludable, como frutas, verduras y granos, diseñado en esp.webp');
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajusta la altura del encabezado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: #FFFFFF; /* Texto blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido del encabezado esté visible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente con mayor opacidad */
+    border-radius: 8px;
+    padding: 8px 20px; /* Espaciado mejorado para legibilidad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #DDA853; /* Color dorado al pasar el cursor */
+}
+
+/* Ajuste para evitar que el encabezado tape el contenido */
+main {
+    padding-top: 20px; /* Espaciado dinámico ajustado */
+    background: #FBF5DD; /* Fondo beige claro */
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0; /* Inicialmente oculto */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos principales */
+h1 {
+    font-size: 2.5em;
+    color: #FFFFFF; /* Texto blanco */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+/* Títulos secundarios */
+h2 {
+    color: #A6CDC6; /* Azul claro */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #16404D; /* Línea azul oscuro */
+    padding-bottom: 10px;
+    font-size: 1.75em;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #16404D; /* Azul oscuro */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #A6CDC6; /* Azul claro */
+    color: #FFFFFF; /* Texto en blanco */
+    transform: scale(1.1);
+}
+
+/* Contenido principal */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #FFFFFF; /* Fondo blanco */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Listas */
+ul {
+    margin: 10px 0 20px 20px;
+    color: #16404D; /* Azul oscuro */
+}
+
+li {
+    transition: color 0.3s, transform 0.3s;
+    list-style: square inside;
+}
+
+li:hover {
+    color: #DDA853; /* Dorado al resaltar */
+    transform: translateX(5px);
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #A6CDC6; /* Bordes azules claros */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #16404D; /* Azul oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    font-weight: 700;
+}
+
+td {
+    background-color: #FFFFFF;
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #DDA853; /* Fondo dorado al resaltar */
+}
+
+/* Botones */
+button {
+    background: linear-gradient(90deg, #16404D, #A6CDC6); /* Degradado azul oscuro-azul claro */
+    color: #FFFFFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #A6CDC6, #16404D);
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #16404D; /* Azul oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    border-top: 2px solid #DDA853; /* Línea dorada */
+}

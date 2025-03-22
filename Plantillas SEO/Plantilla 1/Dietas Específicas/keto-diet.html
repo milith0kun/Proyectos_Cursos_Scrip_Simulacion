@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dieta Cetogénica</title>
+    <link rel="stylesheet" href="../css/specific-diets.css">
+</head>
+<body>
+    <header>
+        <div class="container mx-auto p-4">
+            <h1>Dieta Cetogénica</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:text-blue-500">Inicio</a></li>
+                    <li><a href="#benefits" class="hover:text-blue-500">Beneficios</a></li>
+                    <li><a href="#what-to-eat" class="hover:text-blue-500">¿Qué Comer?</a></li>
+                    <li><a href="#meal-plan" class="hover:text-blue-500">Plan de Comidas</a></li>
+                    <li><a href="#common-myths" class="hover:text-blue-500">Mitos Comunes</a></li>
+                    <li><a href="#calculator" class="hover:text-blue-500">Calculador de Calorías</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container mx-auto mt-16 p-4">
+        <section id="benefits" class="mb-8">
+            <h2>Beneficios de la Dieta Keto</h2>
+            <p>La dieta cetogénica puede ayudar a perder peso y a mejorar varios aspectos de la salud, tales como:</p>
+            <ul class="list-disc ml-6">
+                <li>Reducción de los niveles de glucosa en sangre.</li>
+                <li>Aumento de la energía al usar grasa como fuente principal.</li>
+                <li>Mejora en la salud cardiovascular y mental.</li>
+            </ul>
+            <div class="my-4">
+                <img src="../images/lifestyle/beneficios_keto.webp" alt="Beneficios de la dieta cetogénica" width="400" height="300">
+            </div>
+        </section>
+        
+        <section id="what-to-eat" class="mb-8">
+            <h2>¿Qué Comer?</h2>
+            <p>En una dieta cetogénica, debes incluir:</p>
+            <table class="table-auto border border-gray-300 w-full mb-4">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border border-gray-300 px-4 py-2">Alimentos Ricos en Grasas Saludables</th>
+                        <th class="border border-gray-300 px-4 py-2">Alimentos Prohibidos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">Aguacate</td>
+                        <td class="border border-gray-300 px-4 py-2">Pan y productos de trigo</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">Nueces y semillas</td>
+                        <td class="border border-gray-300 px-4 py-2">Pastas y arroz</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-4 py-2">Carne y pescado (no procesados)</td>
+                        <td class="border border-gray-300 px-4 py-2">Frutas ricas en azúcares</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="my-4">
+                <img src="../images/lifestyle/comparacion_keto.webp" alt="Alimentos permitidos y prohibidos" width="400" height="300">
+            </div>
+        </section>
+        
+        <section id="meal-plan" class="mb-8">
+            <h2>Plan de Comidas</h2>
+            <p>Guía de planificación de comidas cetogénicas para una semana que incluye:</p>
+            <ul class="list-decimal ml-6">
+                <li><strong>Desayuno:</strong> Omelette de espinacas y queso feta.</li>
+                <li><strong>Almuerzo:</strong> Ensalada César con pollo y aderezo sin gluten.</li>
+                <li><strong>Cena:</strong> Salteado de brócoli con salmón a la plancha.</li>
+                <li><strong>Snacks:</strong> Palitos de apio con crema de cacahuate.</li>
+            </ul>
+            <div class="my-4">
+                <img src="../images/lifestyle/plan_de_comidas_keto.webp" alt="Plan de comidas cetogénicas" width="400" height="300">
+            </div>
+        </section>
+        
+        <section id="common-myths" class="mb-8">
+            <h2>Mitos Comunes</h2>
+            <p>Clarificando algunas creencias erróneas sobre la dieta cetogénica:</p>
+            <ul class="list-disc ml-6">
+                <li>La dieta es peligrosa y poco saludable.</li>
+                <li>Solo puedes comer tocino y queso.</li>
+                <li>No puedes tener éxito a largo plazo con la dieta cetogénica.</li>
+            </ul>
+            <div class="my-4">
+                <img src="../images/lifestyle/mitos_keto.webp" alt="Mitos sobre la dieta cetogénica" width="400" height="300">
+            </div>
+        </section>
+
+        <section id="calculator" class="mb-8">
+            <h2>Calculador de Calorías</h2>
+            <p>A continuación, puedes determinar cuántas calorías necesitas:</p>
+            <form id="calorieCalculator" class="bg-white p-4 rounded shadow">
+                <label for="weight" class="block mb-2">Peso (kg):</label>
+                <input type="number" id="weight" class="border border-gray-300 rounded w-full p-2 mb-4" required>
+                
+                <label for="height" class="block mb-2">Altura (cm):</label>
+                <input type="number" id="height" class="border border-gray-300 rounded w-full p-2 mb-4" required>
+                
+                <label for="age" class="block mb-2">Edad:</label>
+                <input type="number" id="age" class="border border-gray-300 rounded w-full p-2 mb-4" required>
+                
+                <label for="activityLevel" class="block mb-2">Nivel de Actividad:</label>
+                <select id="activityLevel" class="border border-gray-300 rounded w-full p-2 mb-4" required>
+                    <option value="sedentario">Sedentario</option>
+                    <option value="ligero">Ligero</option>
+                    <option value="moderado">Moderado</option>
+                    <option value="alto">Alto</option>
+                </select>
+                <button type="submit" class="bg-DDA853 text-white rounded p-2">Calcular Calorías</button>
+            </form>
+            <div class="my-4">
+                <img src="../images/lifestyle/calculadora_keto.webp" alt="Calculador de calorías cetogénicas" width="400" height="300">
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white text-center p-4">
+        <p>&copy; 2025 Nutrición Holística. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="../js/specific-diets.js"></script>
+    <script src="../js/Modificadores/Mofi_general-nutricion.js"></script>
+</body>
+</html> 

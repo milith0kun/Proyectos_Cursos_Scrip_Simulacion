@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Utilidades Responsivas
+   ========================================================================== */
+
+/* Puntos de quiebre principales */
+:root {
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+}
+
+/* Ocultar elementos */
+@media (max-width: 575.98px) {
+    .hide-xs { display: none !important; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hide-sm { display: none !important; }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hide-md { display: none !important; }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hide-lg { display: none !important; }
+}
+
+@media (min-width: 1200px) {
+    .hide-xl { display: none !important; }
+}
+
+/* Mostrar elementos */
+@media (max-width: 575.98px) {
+    .show-xs { display: block !important; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .show-sm { display: block !important; }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .show-md { display: block !important; }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .show-lg { display: block !important; }
+}
+
+@media (min-width: 1200px) {
+    .show-xl { display: block !important; }
+}
+
+/* Contenedores Responsivos */
+.container-fluid {
+    width: 100%;
+    padding-right: var(--container-padding);
+    padding-left: var(--container-padding);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    width: 100%;
+    padding-right: var(--container-padding);
+    padding-left: var(--container-padding);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+    .container { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+    .container { max-width: 960px; }
+}
+
+@media (min-width: 1200px) {
+    .container { max-width: var(--container-max-width); }
+}
+
+/* Márgenes Responsivos */
+@media (max-width: 575.98px) {
+    .m-xs-0 { margin: 0 !important; }
+    .mt-xs-0 { margin-top: 0 !important; }
+    .mb-xs-0 { margin-bottom: 0 !important; }
+    .ml-xs-0 { margin-left: 0 !important; }
+    .mr-xs-0 { margin-right: 0 !important; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .m-sm-0 { margin: 0 !important; }
+    .mt-sm-0 { margin-top: 0 !important; }
+    .mb-sm-0 { margin-bottom: 0 !important; }
+    .ml-sm-0 { margin-left: 0 !important; }
+    .mr-sm-0 { margin-right: 0 !important; }
+}
+
+/* Alineación de Texto Responsiva */
+@media (max-width: 575.98px) {
+    .text-xs-left { text-align: left !important; }
+    .text-xs-center { text-align: center !important; }
+    .text-xs-right { text-align: right !important; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .text-sm-left { text-align: left !important; }
+    .text-sm-center { text-align: center !important; }
+    .text-sm-right { text-align: right !important; }
+}
+
+/* Flexbox Responsivo */
+@media (max-width: 575.98px) {
+    .flex-xs-row { flex-direction: row !important; }
+    .flex-xs-column { flex-direction: column !important; }
+    .justify-xs-center { justify-content: center !important; }
+    .align-xs-center { align-items: center !important; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .flex-sm-row { flex-direction: row !important; }
+    .flex-sm-column { flex-direction: column !important; }
+    .justify-sm-center { justify-content: center !important; }
+    .align-sm-center { align-items: center !important; }
+}
+
+/* Espaciado Responsivo */
+@media (max-width: 575.98px) {
+    .gap-xs { gap: var(--spacing-xs) !important; }
+    .gap-xs-sm { gap: var(--spacing-sm) !important; }
+    .gap-xs-md { gap: var(--spacing-md) !important; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .gap-sm { gap: var(--spacing-sm) !important; }
+    .gap-sm-md { gap: var(--spacing-md) !important; }
+    .gap-sm-lg { gap: var(--spacing-lg) !important; }
+}

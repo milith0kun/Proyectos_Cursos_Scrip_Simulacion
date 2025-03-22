@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{Descripción de la página - Máximo 155 caracteres}}">
+    <meta name="keywords" content="diseño vertical, navegación, portfolio">
+    <meta name="author" content="{{Nombre del Autor}}">
+    <meta name="theme-color" content="#2c3e50">
+    <meta property="og:title" content="{{Título de la Página}}">
+    <meta property="og:description" content="{{Descripción de la Página}}">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <title>{{Título de la Página}} | Navegación Vertical</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/vertical-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <nav class="vertical-nav">
+        <div class="nav-brand">
+            <img src="https://via.placeholder.com/40" alt="Logo" class="nav-logo">
+            <span class="brand-name">Portfolio</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>Sobre Mí</span></a></li>
+            <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i><span>Habilidades</span></a></li>
+            <li><a href="#portfolio" class="nav-link"><i class="fas fa-briefcase"></i><span>Portfolio</span></a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contacto</span></a></li>
+        </ul>
+        <div class="nav-footer">
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <button class="theme-btn" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="home" class="section active">
+            <div class="content-wrapper">
+                <h2 class="section-title animate-on-scroll">Bienvenido a mi Portfolio</h2>
+                <p class="section-subtitle animate-on-scroll">Diseñador y Desarrollador Web</p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#portfolio" class="btn btn-primary">Ver Trabajos</a>
+                    <a href="#contact" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="content-wrapper">
+                <h2 class="section-title animate-on-scroll">Sobre Mí</h2>
+                <div class="about-grid">
+                    <div class="about-image animate-on-scroll">
+                        <img src="https://picsum.photos/id/1015/400/400" alt="Perfil">
+                    </div>
+                    <div class="about-content animate-on-scroll">
+                        <p>{{Tu descripción personal}}</p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="content-wrapper">
+                <h2 class="section-title animate-on-scroll">Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <i class="fas fa-code"></i>
+                        <h3>Desarrollo Web</h3>
+                        <p>Sitios web modernos y responsivos</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Diseño UI/UX</h3>
+                        <p>Interfaces intuitivas y atractivas</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Diseño Responsive</h3>
+                        <p>Adaptable a todos los dispositivos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section">
+            <div class="content-wrapper">
+                <h2 class="section-title animate-on-scroll">Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item animate-on-scroll">
+                        <img src="https://picsum.photos/id/1016/600/400" alt="Proyecto 1">
+                        <div class="portfolio-overlay">
+                            <h3>Proyecto 1</h3>
+                            <p>Diseño Web</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <!-- Más proyectos aquí -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="content-wrapper">
+                <h2 class="section-title animate-on-scroll">Contacto</h2>
+                <div class="contact-grid">
+                    <div class="contact-info animate-on-scroll">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>{{Tu ubicación}}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>{{Tu email}}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <p>{{Tu teléfono}}</p>
+                        </div>
+                    </div>
+                    <form class="contact-form animate-on-scroll">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Enviar Mensaje
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/vertical.js" defer></script>
+</body>
+</html>

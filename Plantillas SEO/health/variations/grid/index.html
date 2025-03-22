@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio profesional con diseño grid y experiencias digitales únicas">
+    <meta name="keywords" content="desarrollo web, diseño UI/UX, portfolio, desarrollo full-stack">
+    <meta name="author" content="Tu Nombre">
+    <meta name="theme-color" content="#2c3e50">
+    <meta property="og:title" content="Portfolio Profesional">
+    <meta property="og:description" content="Creando experiencias digitales innovadoras">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    
+    <title>Portfolio Profesional | Desarrollo & Diseño</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/grid-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="https://img.icons8.com/color/48/000000/code.png">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <p>Preparando experiencia digital...</p>
+        <div class="error-message" style="display: none;">
+            <p>Hubo un problema al cargar el contenido</p>
+            <button class="retry-button" onclick="window.location.reload()">
+                <i class="fas fa-redo"></i> Reintentar
+            </button>
+        </div>
+    </div>
+
+    <div class="progress-bar"></div>
+
+    <header class="header" data-sticky="true">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="https://img.icons8.com/color/48/000000/source-code.png" alt="Logo Portfolio" width="40" height="40">
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="menu">
+                <li><a href="#hero" class="menu-link active">Inicio</a></li>
+                <li><a href="#portfolio" class="menu-link">Portfolio</a></li>
+                <li><a href="#about" class="menu-link">Sobre Mí</a></li>
+                <li><a href="#services" class="menu-link">Servicios</a></li>
+                <li><a href="#contact" class="menu-link">Contacto</li>
+                <li>
+                    <button class="theme-toggle" aria-label="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="grid-container">
+        <section class="grid-section hero" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title animate-on-scroll">Transformando Ideas en Experiencias Digitales</h1>
+                <p class="hero-subtitle animate-on-scroll">Desarrollo web profesional y diseño centrado en el usuario</p>
+                <div class="cta-group">
+                    <a href="#portfolio" class="cta-button primary">
+                        <span>Ver Proyectos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="cta-button secondary">
+                        <span>Contactar</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-background"></div>
+        </section>
+
+        <section id="portfolio" class="grid-section">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Portfolio Destacado</h2>
+                <p class="section-subtitle">Proyectos recientes y casos de éxito</p>
+            </div>
+            <div class="project-grid">
+                <!-- Se carga dinámicamente -->
+            </div>
+        </section>
+
+        <section id="about" class="grid-section">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Experiencia & Habilidades</h2>
+                <p class="section-subtitle">Especializado en desarrollo web moderno y diseño UI/UX</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Se carga dinámicamente -->
+            </div>
+        </section>
+
+        <section id="services" class="grid-section">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Servicios Profesionales</h2>
+                <p class="section-subtitle">Soluciones digitales a medida para tu negocio</p>
+            </div>
+            <div class="services-grid">
+                <!-- Se carga dinámicamente -->
+            </div>
+        </section>
+
+        <section id="contact" class="grid-section">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">¿Iniciamos un Proyecto?</h2>
+                <p class="section-subtitle">Cuéntame sobre tu idea y hagámosla realidad</p>
+            </div>
+            <form class="contact-form animate-on-scroll" data-form="contact">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <span>Enviar Mensaje</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="footer-info">
+                <img src="https://img.icons8.com/color/48/000000/source-code.png" alt="Logo" class="footer-logo" width="40" height="40">
+                <div class="footer-text">
+                    <h3>Tu Nombre</h3>
+                    <p>Desarrollador Web Full Stack</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Sígueme</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/grid.js"></script>
+</body>
+</html>

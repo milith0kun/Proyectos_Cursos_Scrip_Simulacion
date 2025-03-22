@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio creativo con diseño horizontal innovador">
+    <meta name="keywords" content="diseño web, desarrollo, portfolio, creativo">
+    <meta name="author" content="Tu Nombre">
+    <meta name="theme-color" content="#2c3e50">
+    <meta property="og:title" content="Portfolio Creativo">
+    <meta property="og:description" content="Experiencias digitales únicas">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <title>Portfolio Creativo | Diseño Horizontal</title>
+    
+    <!-- Precargas optimizadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/horizontal-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <!-- Pantalla de carga -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <p>Cargando experiencia...</p>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="progress-bar"></div>
+    
+    <!-- Navegación lateral -->
+    <nav class="side-nav">
+        <div class="logo">
+            <img src="img/logo.svg" alt="Logo Portfolio" width="40" height="40">
+            <button class="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <ul class="nav-dots" role="navigation">
+            <li><a href="#inicio" class="active" aria-label="Inicio" data-section="0"></a></li>
+            <li><a href="#proyectos" aria-label="Proyectos" data-section="1"></a></li>
+            <li><a href="#servicios" aria-label="Servicios" data-section="2"></a></li>
+            <li><a href="#contacto" aria-label="Contacto" data-section="3"></a></li>
+        </ul>
+        <div class="social-links">
+            <a href="#" aria-label="GitHub" data-platform="github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn" data-platform="linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" aria-label="Twitter" data-platform="twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="horizontal-container">
+        <!-- Secciones -->
+        <section id="inicio" class="horizontal-section">
+            <div class="hero-content">
+                <h1 class="animate-on-scroll">Creando Experiencias Digitales</h1>
+                <p class="animate-on-scroll">Transformando ideas en soluciones innovadoras</p>
+                <div class="cta-buttons">
+                    <a href="#proyectos" class="cta-button primary">Ver Proyectos</a>
+                    <a href="#contacto" class="cta-button secondary">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="horizontal-section">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">Proyectos Destacados</h2>
+                <div class="project-grid">
+                    <!-- Contenido dinámico desde config.js -->
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="horizontal-section">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">Servicios</h2>
+                <div class="services-grid">
+                    <!-- Contenido dinámico desde config.js -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="horizontal-section">
+            <div class="section-content">
+                <h2 class="section-title animate-on-scroll">Contacto</h2>
+                <form class="contact-form animate-on-scroll">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span>Enviar Mensaje</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-indicator">
+        <span class="scroll-text">Desliza</span>
+        <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/horizontal.js"></script>
+</body>
+</html>

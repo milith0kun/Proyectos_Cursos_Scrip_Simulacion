@@ -1,0 +1,135 @@
+/* Estilo global para el cuerpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Fondo claro por defecto */
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: linear-gradient(45deg, #1a1a1a, #2c2c2c);
+}
+
+/* Estilo para las secciones */
+section {
+    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+    width: 90%; /* Reduce section width */
+    margin: 20px auto; /* Add margin to see background */
+    border-radius: 15px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds shadow effect */
+}
+
+/* Secciones completas que ocupan toda la pantalla */
+.full-screen {
+    min-height: 90vh; /* Changed from 100vh to create space between sections */
+}
+
+/* Colores de fondo de cada sección */
+#seccion1 { background-color: #f44336; } /* Rojo */
+#seccion2 { background-color: #2196F3; } /* Azul */
+#seccion3 { background-color: #4CAF50; } /* Verde */
+#seccion4 { background-color: #FFEB3B; color: black; } /* Amarillo */
+#seccion5 { background-color: #9C27B0; } /* Morado */
+#seccion6 { background-color: #FF5722; } /* Naranja */
+#seccion7 { background-color: #00BCD4; } /* Cian */
+
+/* Estilos adicionales para mejorar la visualización de texto */
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Agregar un espacio superior al contenido cuando el enlace de navegación esté activo */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fondo general para la página */
+body {
+    background-color: #e5e5e5;
+}
+
+/* Mejorar la visibilidad de la navegación */
+.navbar ul {
+    background-color: #333;
+    margin-top: 20px;
+    padding: 15px 0;
+}
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    margin-top: 10px;
+}
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+/* Responsividad: Asegurarse de que la página se vea bien en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+    /* Add responsive adjustments */
+    @media screen and (max-width: 768px) {
+        section {
+            width: 95%; /* Slightly wider on mobile */
+        }
+    }
+}
+/* Ajuste para el contenido debajo del header fijo */
+.container {
+    padding-top: 120px;
+}
