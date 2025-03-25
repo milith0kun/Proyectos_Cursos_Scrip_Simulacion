@@ -1,0 +1,367 @@
+/* Puntos de quiebre principales */
+:root {
+    --punto-quiebre-xs: 480px;
+    --punto-quiebre-sm: 768px;
+    --punto-quiebre-md: 992px;
+    --punto-quiebre-lg: 1200px;
+    --punto-quiebre-xl: 1400px;
+}
+
+/* Pantallas grandes (≥1400px) */
+@media (min-width: 1400px) {
+    .contenedor {
+        max-width: 1320px;
+    }
+}
+
+/* Pantallas medianas-grandes (≥1200px) */
+@media (min-width: 1200px) {
+    .contenedor {
+        max-width: 1140px;
+    }
+}
+
+/* Pantallas medianas (≥992px) */
+@media (min-width: 992px) {
+    .contenedor {
+        max-width: 960px;
+    }
+}
+
+/* Tabletas (≥768px) */
+@media (min-width: 768px) {
+    .contenedor {
+        max-width: 720px;
+    }
+}
+
+/* Móviles grandes (≥576px) */
+@media (min-width: 576px) {
+    .contenedor {
+        max-width: 540px;
+    }
+}
+
+/* Móviles pequeños (<576px) */
+@media (max-width: 575.98px) {
+    .contenedor {
+        width: 100%;
+        padding-derecha: var(--espacio-md);
+        padding-izquierda: var(--espacio-md);
+    }
+}
+
+/* Utilidades adaptables */
+.ocultar-xs {
+    display: none !important;
+}
+
+@media (min-width: 576px) {
+    .ocultar-sm {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .ocultar-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .ocultar-lg {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ocultar-xl {
+        display: none !important;
+    }
+}
+
+/* Márgenes adaptables */
+.margen-adaptable {
+    margin: var(--espacio-xl);
+}
+
+@media (max-width: 992px) {
+    .margen-adaptable {
+        margin: var(--espacio-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .margen-adaptable {
+        margin: var(--espacio-md);
+    }
+}
+
+@media (max-width: 576px) {
+    .margen-adaptable {
+        margin: var(--espacio-sm);
+    }
+}
+
+/* Relleno adaptable */
+.relleno-adaptable {
+    padding: var(--espacio-xl);
+}
+
+@media (max-width: 992px) {
+    .relleno-adaptable {
+        padding: var(--espacio-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .relleno-adaptable {
+        padding: var(--espacio-md);
+    }
+}
+
+@media (max-width: 576px) {
+    .relleno-adaptable {
+        padding: var(--espacio-sm);
+    }
+}
+
+/* Tamaños de texto adaptables */
+.texto-adaptable {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.titulo-adaptable {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Cuadrícula adaptable */
+.cuadricula-adaptable {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espacio-lg);
+}
+
+@media (max-width: 768px) {
+    .cuadricula-adaptable {
+        gap: var(--espacio-md);
+    }
+}
+
+/* Flexbox adaptable */
+.flex-adaptable {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-md);
+}
+
+@media (max-width: 768px) {
+    .flex-adaptable {
+        flex-direction: column;
+    }
+}
+
+/* Imágenes adaptables */
+.imagen-adaptable {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes de altura adaptable */
+.altura-adaptable {
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .altura-adaptable {
+        height: auto;
+        min-height: 500px;
+    }
+}
+
+/* Adaptaciones para la sección Hero */
+@media (max-width: 768px) {
+    .seccion-hero {
+        min-height: 80vh;
+    }
+
+    .contenido-hero {
+        text-align: center;
+        padding: var(--espacio-xl) var(--espacio-md);
+    }
+
+    .titulo-hero {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+    }
+}
+
+/* Adaptaciones para la sección Productos */
+@media (max-width: 992px) {
+    .cuadricula-productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--espacio-lg);
+    }
+
+    .filtros-productos {
+        flex-wrap: wrap;
+        gap: var(--espacio-sm);
+    }
+}
+
+@media (max-width: 576px) {
+    .cuadricula-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adaptaciones para la sección Proceso */
+@media (max-width: 768px) {
+    .cronologia-proceso {
+        padding: 0 var(--espacio-md);
+    }
+
+    .paso-proceso {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .numero-paso {
+        grid-column: 1;
+        margin: 0 auto var(--espacio-md);
+    }
+
+    .contenido-paso {
+        grid-column: 1;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* Adaptaciones para la sección Origen */
+@media (max-width: 992px) {
+    .cuadrícula-origen {
+        grid-template-columns: 1fr;
+        gap: var(--espacio-xl);
+    }
+
+    .imagen-origen {
+        min-height: 400px;
+    }
+
+    .contenido-origen {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .caracteristicas-origen {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .caracteristicas-origen {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adaptaciones para la sección Testimonios */
+@media (max-width: 992px) {
+    .deslizador-testimonios {
+        grid-template-columns: 1fr;
+        gap: var(--espacio-lg);
+    }
+
+    .testimonio {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Adaptaciones para el Footer */
+@media (max-width: 992px) {
+    .cuadrícula-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--espacio-xl);
+    }
+
+    .marca-footer {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .social-footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .cuadrícula-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .pie-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--espacio-md);
+    }
+
+    .enlaces-legales {
+        flex-direction: column;
+        gap: var(--espacio-sm);
+    }
+}
+
+/* Adaptaciones para el Carrito */
+@media (max-width: 576px) {
+    .sidebar-carrito {
+        width: 100%;
+    }
+
+    .contenido-carrito {
+        padding: var(--espacio-md);
+    }
+}
+
+/* Adaptaciones para la Navegación */
+@media (max-width: 992px) {
+    .nav-principal {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 400px;
+        background: var(--color-blanco);
+        padding: var(--espacio-xl);
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-principal.activo {
+        right: 0;
+    }
+
+    .menu-principal {
+        flex-direction: column;
+        gap: var(--espacio-md);
+    }
+
+    .boton-menu {
+        display: block;
+    }
+}
+
+/* Adaptaciones para el Parallax */
+@media (max-width: 768px) {
+    .seccion-parallax {
+        background-attachment: scroll;
+    }
+
+    .titulo-parallax {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .descripcion-parallax {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+    }
+}

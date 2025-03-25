@@ -1,0 +1,137 @@
+.seccion-origen {
+    padding: calc(var(--espacio-xl) * 2) 0;
+    background: linear-gradient(to bottom, var(--color-gris-100), var(--color-blanco));
+    position: relative;
+    overflow: hidden;
+}
+
+.cuadrícula-origen {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: calc(var(--espacio-xl) * 1.5);
+    align-items: center;
+}
+
+.imagen-origen {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+    min-height: 600px;
+}
+
+.imagen-origen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/images/habitat_natural.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.imagen-origen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.2)
+    );
+    z-index: 2;
+}
+
+.insignia-origen {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.insignia-origen span {
+    display: block;
+    font-family: var(--fuente-primaria);
+    font-size: var(--texto-xl);
+    font-weight: 600;
+    color: var(--color-dorado-primario);
+}
+
+.insignia-origen small {
+    color: var(--color-texto);
+    font-size: var(--texto-xs);
+}
+
+.contenido-origen {
+    padding-right: var(--espacio-xl);
+}
+
+.descripcion-origen {
+    font-size: var(--texto-lg);
+    line-height: 1.7;
+    color: var(--color-texto);
+    margin: var(--espacio-lg) 0;
+}
+
+.caracteristicas-origen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-lg);
+    margin: var(--espacio-xl) 0;
+}
+
+.item-caracteristica {
+    text-align: center;
+}
+
+.item-caracteristica i {
+    font-size: 2rem;
+    color: var(--color-dorado-primario);
+    margin-bottom: var(--espacio-sm);
+}
+
+.item-caracteristica h4 {
+    font-family: var(--fuente-primaria);
+    font-size: var(--texto-md);
+    color: var(--color-texto-oscuro);
+    margin-bottom: var(--espacio-xs);
+}
+
+.item-caracteristica p {
+    font-size: var(--texto-sm);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+.contenido-origen .btn-contorno {
+    margin-top: var(--espacio-lg);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espacio-sm);
+}
+
+.contenido-origen .btn-contorno:hover {
+    background: var(--color-dorado-primario);
+    color: var(--color-negro);
+}
+
+.etiqueta-seccion {
+    color: var(--color-dorado-primario);
+    font-size: var(--texto-sm);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--espacio-sm);
+    display: block;
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-primaria);
+    font-size: var(--texto-2xl);
+    color: var(--color-texto-oscuro);
+    margin-bottom: var(--espacio-md);
+}

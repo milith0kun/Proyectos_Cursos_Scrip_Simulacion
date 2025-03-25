@@ -1,0 +1,188 @@
+.pie-sitio {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    padding: calc(var(--espacio-xl) * 2) 0 var(--espacio-xl);
+    font-family: var(--fuente-secundaria);
+    position: relative;
+}
+
+.pie-sitio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-dorado-primario),
+        transparent
+    );
+}
+
+.cuadricula-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    gap: var(--espacio-xl);
+    margin-bottom: var(--espacio-xl);
+}
+
+/* Marca Footer */
+.marca-footer {
+    max-width: 320px;
+}
+
+.logo-footer {
+    margin-bottom: var(--espacio-lg);
+}
+
+.logo-footer .logo-as {
+    width: 45px;
+    height: 45px;
+}
+
+.descripcion-marca {
+    font-size: var(--texto-sm);
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: var(--espacio-lg);
+}
+
+.social-footer {
+    display: flex;
+    gap: var(--espacio-md);
+}
+
+.enlace-social {
+    color: var(--color-dorado-primario);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.enlace-social:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Navegación Footer */
+.titulo-footer {
+    color: var(--color-dorado-primario);
+    font-size: var(--texto-md);
+    margin-bottom: var(--espacio-lg);
+    font-weight: 500;
+}
+
+.enlaces-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enlaces-footer li {
+    margin-bottom: var(--espacio-sm);
+}
+
+.enlaces-footer a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.enlaces-footer a:hover {
+    color: var(--color-dorado-primario);
+    opacity: 1;
+}
+
+/* Contacto Footer */
+.lista-contacto {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-contacto li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espacio-md);
+    margin-bottom: var(--espacio-md);
+}
+
+.lista-contacto i {
+    color: var(--color-dorado-primario);
+    font-size: 1.2rem;
+}
+
+.lista-contacto div {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-contacto span {
+    color: var(--color-blanco);
+    margin-bottom: 2px;
+}
+
+.lista-contacto small {
+    opacity: 0.7;
+    font-size: var(--texto-xs);
+}
+
+/* Newsletter Footer */
+.formulario-newsletter {
+    display: flex;
+    gap: var(--espacio-sm);
+    margin-top: var(--espacio-md);
+}
+
+.formulario-newsletter input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1rem;
+    color: var(--color-blanco);
+    border-radius: 4px;
+}
+
+.formulario-newsletter button {
+    background: var(--color-dorado-primario);
+    color: var(--color-negro);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.formulario-newsletter button:hover {
+    background: var(--color-dorado-secundario);
+    transform: translateX(2px);
+}
+
+/* Pie Footer */
+.pie-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--espacio-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enlaces-legales {
+    display: flex;
+    gap: var(--espacio-lg);
+}
+
+.enlaces-legales a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: var(--texto-sm);
+    transition: opacity 0.3s ease;
+}
+
+.enlaces-legales a:hover {
+    opacity: 1;
+}

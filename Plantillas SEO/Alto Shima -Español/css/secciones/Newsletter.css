@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Sección de Newsletter - Alto Shima Chocolate
+   ========================================================================== */
+
+/* Estilos para el Newsletter en el Footer */
+.newsletter-footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.newsletter-footer p {
+    color: var(--color-blanco);
+    opacity: 0.8;
+    font-size: var(--texto-sm);
+    line-height: 1.6;
+}
+
+.formulario-newsletter {
+    display: flex;
+    gap: var(--espacio-sm);
+    position: relative;
+}
+
+.formulario-newsletter input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-blanco);
+    font-size: var(--texto-sm);
+    transition: all 0.3s ease;
+}
+
+.formulario-newsletter input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.formulario-newsletter input:focus {
+    outline: none;
+    border-color: var(--color-dorado-primario);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.formulario-newsletter button {
+    background: var(--color-dorado-primario);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.formulario-newsletter button i {
+    color: var(--color-negro);
+    font-size: var(--texto-md);
+    transition: transform 0.3s ease;
+}
+
+.formulario-newsletter button:hover {
+    background: var(--color-dorado-secundario);
+    transform: translateX(2px);
+}
+
+.formulario-newsletter button:hover i {
+    transform: translateX(2px);
+}
+
+/* Estilos para la sección de Newsletter principal */
+.seccion-boletin {
+    padding: var(--espacio-3xl) 0;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion-boletin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/patrones/cacao-patron.png');
+    background-size: 200px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.contenido-boletin {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 0 var(--espacio-lg);
+}
+
+.contenido-boletin h2 {
+    font-family: var(--fuente-primaria);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--espacio-md);
+    color: var(--color-dorado-primario);
+}
+
+.contenido-boletin p {
+    margin-bottom: var(--espacio-xl);
+    line-height: 1.6;
+    opacity: 0.9;
+    font-size: var(--texto-lg);
+}
+
+.formulario-boletin {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: var(--espacio-sm);
+}
+
+.formulario-boletin input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radio-borde-sm);
+    font-size: var(--texto-base);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-blanco);
+    transition: all 0.3s ease;
+}
+
+.formulario-boletin input:focus {
+    outline: none;
+    border-color: var(--color-dorado-primario);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.formulario-boletin input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.formulario-boletin .boton-primario {
+    padding: 1rem 2rem;
+    background: var(--color-dorado-primario);
+    color: var(--color-negro);
+    border: none;
+    border-radius: var(--radio-borde-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.formulario-boletin .boton-primario:hover {
+    background: var(--color-dorado-secundario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--color-dorado-primario-rgb), 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .formulario-boletin {
+        flex-direction: column;
+        padding: 0 var(--espacio-md);
+    }
+
+    .formulario-boletin input,
+    .formulario-boletin .boton-primario {
+        width: 100%;
+    }
+}

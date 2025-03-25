@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Logo Alto Shima - Estilo Minimalista
+   ========================================================================== */
+
+.logo-as {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-negro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transicion-normal);
+    margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-as::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: all var(--transicion-normal);
+}
+
+.logo-as::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, 
+        transparent 40%,
+        rgba(255, 215, 0, 0.1) 45%,
+        rgba(255, 215, 0, 0.2) 50%,
+        rgba(255, 215, 0, 0.1) 55%,
+        transparent 60%
+    );
+    transition: transform 0.6s ease;
+}
+
+.texto-logo-as {
+    position: relative;
+    z-index: 2;
+    font-family: var(--fuente-primaria);
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    letter-spacing: -0.5px;
+}
+
+.letra-logo-a,
+.letra-logo-s {
+    transition: all var(--transicion-normal);
+    transform-origin: center;
+}
+
+.letra-logo-a {
+    color: var(--color-dorado-secundario);
+}
+
+.letra-logo-s {
+    color: var(--color-dorado-primario);
+    margin-left: -2px;
+}
+
+/* Efectos hover */
+.logo-as:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.15);
+}
+
+.logo-as:hover::before {
+    border-color: rgba(255, 215, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.logo-as:hover::after {
+    transform: rotate(180deg);
+}
+
+.logo-as:hover .letra-logo-a {
+    color: var(--color-dorado-primario);
+    transform: translateX(-1px);
+}
+
+.logo-as:hover .letra-logo-s {
+    color: var(--color-dorado-secundario);
+    transform: translateX(1px);
+}
+
+/* Efectos focus para accesibilidad */
+.logo-as:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-dorado-primario);
+}
+
+/* Animación inicial */
+@keyframes logoAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logo-as {
+    animation: logoAppear 0.6s ease-out;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .logo-as {
+        width: 45px;
+        height: 45px;
+    }
+
+    .texto-logo-as {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-as {
+        width: 40px;
+        height: 40px;
+    }
+
+    .texto-logo-as {
+        font-size: 18px;
+    }
+}
+
+/* Soporte para modo oscuro */
+@media (prefers-color-scheme: dark) {
+    .logo-as {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Soporte para reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .logo-as,
+    .logo-as::before,
+    .logo-as::after,
+    .letra-logo-a,
+    .letra-logo-s {
+        transition: none;
+        animation: none;
+    }
+}
