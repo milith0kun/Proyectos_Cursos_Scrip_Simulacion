@@ -1,7 +1,9 @@
 
-// API Configuration
-const HF_API_KEY = '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';
-const HF_API_URL = 'https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-dev';
+// Configuración de API
+const config = {
+    HF_API_KEY: 'tu_api_key_aquí',
+    HF_API_URL: 'https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-dev'
+};
 
 // Basic utility functions
 function mostrarMensaje(mensaje) {
@@ -16,31 +18,7 @@ function ocultarElemento(elemento) {
     if (elemento) elemento.style.display = 'none';
 }
 
-// API verification function
-async function verificarAPI() {
-    try {
-        const response = await fetch(HF_API_URL, {
-            headers: {
-                Authorization: `Bearer ${HF_API_KEY}`,
-                "Content-Type": "application/json",
-            },
-            method: "POST",
-            body: JSON.stringify({ inputs: "test" }),
-        });
 
-        if (response.ok) {
-            mostrarMensaje("¡API conectada correctamente!");
-            return true;
-        } else {
-            const errorText = await response.text();
-            mostrarMensaje("Error de conexión: " + errorText);
-            return false;
-        }
-    } catch (error) {
-        mostrarMensaje("Error de conexión: " + error.message);
-        return false;
-    }
-}
 
 
 // Global variables
