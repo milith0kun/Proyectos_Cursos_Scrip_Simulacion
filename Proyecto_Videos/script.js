@@ -1,9 +1,7 @@
 
-// Configuración de API
-const config = {
-    HF_API_KEY: 'tu_api_key_aquí',
-    HF_API_URL: 'https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-dev'
-};
+// API Configuration
+const HF_API_KEY = config.HF_API_KEY;
+const HF_API_URL = config.HF_API_URL;
 
 // Basic utility functions
 function mostrarMensaje(mensaje) {
