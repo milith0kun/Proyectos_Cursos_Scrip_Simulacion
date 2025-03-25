@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Archivo Principal de Estilos - Alto Shima Chocolate
+   ========================================================================== */
+
+/* Base */
+@import 'base/variables.css';
+@import 'base/reinicio.css';
+@import 'base/tipografia.css';
+
+/* Componentes */
+@import 'componentes/encabezado.css';
+@import 'componentes/logo.css';
+@import 'componentes/pie-pagina.css';
+@import 'componentes/testimonios.css';
+
+@import 'componentes/boton-whatsapp.css';
+@import 'componentes/carrito.css';
+
+/* Secciones */
+@import 'secciones/hero.css';
+@import 'secciones/Newsletter.css';
+
+@import 'secciones/productos.css';
+@import 'secciones/proceso.css';
+@import 'secciones/origen.css';
+@import 'secciones/testimonios.css';
+@import 'secciones/paralax.css';
+
+/* Utilidades */
+
+@import 'utilidades/adaptable.css';

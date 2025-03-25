@@ -1,0 +1,434 @@
+.overlay-carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    backdrop-filter: blur(4px);
+}
+
+.overlay-carrito.activo {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-carrito {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: var(--color-blanco);
+    padding: 2rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.overlay-carrito.activo .sidebar-carrito {
+    transform: translateX(-400px);
+}
+
+.cabecera-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-gris-200);
+}
+
+.titulo-carrito {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-negro);
+    font-family: var(--fuente-primaria);
+}
+
+.contador-carrito {
+    background: var(--color-dorado-primario);
+    color: var(--color-blanco);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.cerrar-carrito {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-gris-600);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.cerrar-carrito:hover {
+    background: var(--color-gris-100);
+    color: var(--color-negro);
+    transform: rotate(90deg);
+}
+
+.carrito-vacio {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-gris-600);
+    display: none;
+}
+
+.carrito-vacio.visible {
+    display: block;
+}
+
+.carrito-vacio i {
+    font-size: 3rem;
+    color: var(--color-gris-400);
+    margin-bottom: 1rem;
+}
+
+.articulos-carrito {
+    flex: 1;
+    overflow-y: auto;
+    margin: -0.5rem -2rem 1.5rem;
+    padding: 0.5rem 2rem;
+}
+
+.articulos-carrito::-webkit-scrollbar {
+    width: 6px;
+}
+
+.articulos-carrito::-webkit-scrollbar-track {
+    background: var(--color-gris-100);
+}
+
+.articulos-carrito::-webkit-scrollbar-thumb {
+    background: var(--color-gris-300);
+    border-radius: 3px;
+}
+
+.articulo-carrito {
+    display: flex;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--color-gris-200);
+    animation: fadeIn 0.3s ease;
+}
+
+.imagen-articulo {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: var(--color-gris-100);
+}
+
+.detalles-articulo {
+    flex: 1;
+    min-width: 0;
+}
+
+.titulo-articulo {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-negro);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.precio-articulo {
+    color: var(--color-dorado-primario);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.controles-articulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.8rem;
+}
+
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--color-gris-100);
+    padding: 0.3rem;
+    border-radius: 6px;
+}
+
+.btn-cantidad {
+    background: none;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--color-gris-700);
+}
+
+.btn-cantidad:hover {
+    background: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+.cantidad {
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+}
+
+.eliminar-articulo {
+    color: var(--color-gris-500);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+.eliminar-articulo:hover {
+    color: #ff4444;
+    background: #fff1f1;
+}
+
+.pie-carrito {
+    border-top: 1px solid var(--color-gris-200);
+    padding-top: 1.5rem;
+    margin-top: auto;
+}
+
+.total-carrito {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.btn-pago {
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--color-dorado-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-pago:hover {
+    background: var(--color-dorado-secundario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-carrito {
+        width: 100%;
+        right: -100%;
+    }
+
+    .overlay-carrito.activo .sidebar-carrito {
+        transform: translateX(-100%);
+    }
+
+    .articulo-carrito {
+        gap: 1rem;
+    }
+
+    .imagen-articulo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .control-cantidad {
+        gap: 0.5rem;
+    }
+
+    .btn-cantidad {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Notificaciones */
+.notificacion-carrito {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background: var(--color-blanco);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1100;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+}
+
+.notificacion-carrito.mostrar {
+    bottom: 2rem;
+}
+
+.notificacion-carrito.exito {
+    background: #4CAF50;
+    color: white;
+}
+
+.notificacion-carrito.error {
+    background: #f44336;
+    color: white;
+}
+
+.notificacion-carrito.advertencia {
+    background: #ff9800;
+    color: white;
+}
+
+.notificacion-carrito.info {
+    background: #2196F3;
+    color: white;
+}
+
+/* Mejoras en botones */
+.btn-pago:disabled {
+    background: var(--color-gris-400);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.control-cantidad {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cantidad {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-cantidad::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--color-dorado-primario);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-cantidad:hover::before {
+    width: 120%;
+    height: 120%;
+    opacity: 0.1;
+}
+
+/* Animación para artículos del carrito */
+@keyframes deslizar {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.articulo-carrito {
+    animation: deslizar 0.3s ease forwards;
+}
+
+/* Mejoras en scrollbar */
+.articulos-carrito {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-dorado-primario) var(--color-gris-100);
+}
+
+/* Mejoras en carrito vacío */
+.carrito-vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carrito-vacio.visible {
+    opacity: 1;
+}
+
+.carrito-vacio i {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dorado-primario);
+    opacity: 0.5;
+}
+
+/* Variantes de imágenes de productos */
+.articulo-carrito[data-category="chocolate"] .imagen-articulo.bitter {
+    background-image: url('../../assets/images/chocolate_bitter.jpg');
+}
+
+.articulo-carrito[data-category="frutas"] .imagen-articulo.mango {
+    background-image: url('../../assets/images/Chocolate_Mango.jpg');
+}
+
+.articulo-carrito[data-category="frutas"] .imagen-articulo.mix-tropical {
+    background-image: url('../../assets/images/chocolate_frutas.jpg');
+}
+
+.articulo-carrito[data-category="especiales"] .imagen-articulo.sal-maras {
+    background-image: url('../../assets/images/chocolate_maras.jpg');
+}
+
+.articulo-carrito[data-category="especiales"] .imagen-articulo.nueces {
+    background-image: url('../../assets/images/chocolate_nueces.jpg');
+}
+
+.articulo-carrito[data-category="frutas"] .imagen-articulo.naranja {
+    background-image: url('../../assets/images/chocolate_naranja.jpg');
+}
+
+.articulo-carrito[data-category="frutas"] .imagen-articulo.arandanos {
+    background-image: url('../../assets/images/chocolate_arandanos.jpg');
+}
+
+.articulo-carrito[data-category="frutas"] .imagen-articulo.pina {
+    background-image: url('../../assets/images/chocolate_piña.jpg');
+}

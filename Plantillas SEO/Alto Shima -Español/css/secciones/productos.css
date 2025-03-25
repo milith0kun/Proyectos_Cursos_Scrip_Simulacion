@@ -1,0 +1,151 @@
+.seccion-productos {
+    padding: calc(var(--espacio-xl) * 2) 0;
+    background: linear-gradient(to bottom, #fff, #f8f8f8);
+    overflow-x: hidden;
+}
+
+.cuadricula-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 2rem;
+}
+
+.tarjeta-producto {
+    background-color: var(--color-blanco);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.imagen-producto {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Square aspect ratio 1:1 */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.insignia-producto {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--color-dorado-primario);
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.contenido-producto {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .cuadricula-productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .cuadricula-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .cuadricula-productos {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+
+/* Fix image paths */
+[data-categoria="chocolate"] .imagen-producto.amargo {
+    background-image: url('../../assets/images/chocolate_amargo.jpg');
+}
+
+[data-categoria="frutas"] .imagen-producto.mango {
+    background-image: url('../../assets/images/chocolate_mango.jpg');
+}
+
+/* Add overlay effect */
+.imagen-producto::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0.1) 70%, 
+        rgba(0,0,0,0.2) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Enhance hover effects */
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-producto:hover .imagen-producto {
+    transform: scale(1.05);
+}
+
+.tarjeta-producto:hover .imagen-producto::after {
+    opacity: 1;
+}
+
+/* Improve button styles */
+.btn-agregar-carrito {
+    background: var(--color-dorado-primario);
+    color: var(--color-blanco);
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 4px 12px rgba(var(--color-dorado-primario-rgb), 0.2);
+}
+
+.btn-agregar-carrito:hover {
+    background: var(--color-dorado-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(var(--color-dorado-primario-rgb), 0.3);
+}
+
+@media (max-width: 992px) {
+    .cuadricula-productos {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem var(--espacio-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .cuadricula-productos {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}

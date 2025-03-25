@@ -1,0 +1,74 @@
+/* Reset básico */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    /* Comportamiento de recarga de página */
+    -webkit-cache-control: no-cache;
+    -moz-cache-control: no-cache;
+    -ms-cache-control: no-cache;
+    -o-cache-control: no-cache;
+    cache-control: no-cache;
+}
+
+/* Forzar recarga de página al refrescar */
+@media all {
+    html {
+        height: 100%;
+        overflow: auto;
+    }
+    
+    body {
+        height: 100%;
+        position: relative;
+    }
+}
+
+body {
+    font-family: var(--fuente-secundaria);
+    color: var(--color-negro);
+    line-height: 1.6;
+    background-color: var(--color-blanco);
+    overflow-x: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedor {
+    max-width: var(--ancho-maximo-contenedor);
+    margin: 0 auto;
+    padding: 0 var(--relleno-contenedor);
+}
