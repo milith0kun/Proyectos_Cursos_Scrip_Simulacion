@@ -3,103 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Imágenes IA</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>CreadorIA - Generador de Imágenes con Inteligencia Artificial</title>
+    <link rel="stylesheet" href="src/css/principal.css">
+    <link rel="stylesheet" href="src/css/galeria.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="app-container">
-        <nav class="sidebar">
-            <div class="logo">
-                <div class="logo-icon">🎨</div>
-                <div class="logo-text">IA Image Gen</div>
+    <header class="barra-superior">
+        <div class="logo">
+            <i class="fas fa-magic"></i>
+            <span>CreadorIA</span>
+        </div>
+        <div class="navegacion-principal">
+            <button class="boton-navegacion activo">Explorar</button>
+            <button class="boton-navegacion">Crear</button>
+            <button class="boton-navegacion">Editar</button>
+        </div>
+       
+        <div class="controles-usuario">
+            <!-- Reemplazar el onclick actual por: -->
+            <button class="boton-probar">
+                <i class="fas fa-vial"></i>
+                <span>Probar API</span>
+            </button>
+            <select id="tamanoImagen" class="selector-tamano">
+                <option value="1024x1024">1024 × 1024</option>
+                <option value="1152x896">1152 × 896</option>
+                <option value="1536x640">1536 × 640</option>
+            </select>
+        </div>
+    </header>
+    <nav class="panel-lateral">
+        <div class="app-title">
+            <h1>Generador de Imágenes</h1>
+        </div>
+        <div class="entrada-descripcion">
+            <textarea placeholder="Describe lo que quieres crear..." class="campo-texto"></textarea>
+            <div class="controles-entrada">
+                <button class="boton-asistente" title="AI prompt"><i class="fas fa-robot"></i></button>
+                <button class="boton-variaciones" title="Variaciones"><i class="fas fa-cube"></i></button>
             </div>
-            <ul class="menu">
-                <li class="active"><i class="fas fa-home"></i><span>Inicio</span></li>
-                <li><i class="fas fa-image"></i><span>Galería</span></li>
-                <li><i class="fas fa-cog"></i><span>Ajustes</span></li>
-            </ul>
-        </nav>
-
-        <main class="main-content">
-            <header class="top-bar">
-                <div class="search-bar">
-                    <input type="text" 
-                           id="textoEntrada" 
-                           placeholder="Describe la imagen que deseas crear..."
-                           autocomplete="off">
-                    <button class="generate-btn" onclick="generarImagen()">
-                        <i class="fas fa-wand-magic-sparkles"></i>
-                        <span>Generar</span>
-                    </button>
-                </div>
-                <div class="user-controls">
-                    <button class="test-btn" onclick="verificarAPI()">
-                        <i class="fas fa-vial"></i>
-                        <span>Probar API</span>
-                    </button>
-                    <select id="tamanoImagen" class="size-select">
-                        <option value="1024x1024">1024 × 1024</option>
-                        <option value="1152x896">1152 × 896</option>
-                        <option value="1536x640">1536 × 640</option>
-                    </select>
-                </div>
-            </header>
-
-            <div class="styles-bar">
-                <button class="style-btn" onclick="cambiarEstilo('realista')">
-                    <i class="fas fa-camera"></i>Realista
+        </div>
+    
+      
+    
+        <div class="seccion-barra">
+            <div class="opciones-rapidas">
+                <button class="opcion-rapida" data-estilo="Realistic" title="Realistic">
+                    <i class="fas fa-camera"></i>
                 </button>
-                <button class="style-btn" onclick="cambiarEstilo('anime')">
-                    <i class="fas fa-paint-brush"></i>Anime
+                <button class="opcion-rapida" data-estilo="Artistic" title="Artistic">
+                    <i class="fas fa-paint-brush"></i>
                 </button>
-                <button class="style-btn" onclick="cambiarEstilo('digital')">
-                    <i class="fas fa-desktop"></i>Digital
+                <button class="opcion-rapida" data-estilo="3D" title="3D">
+                    <i class="fas fa-cube"></i>
                 </button>
-                <button class="style-btn" onclick="cambiarEstilo('oleo')">
-                    <i class="fas fa-palette"></i>Óleo
-                </button>
-                <button class="style-btn" onclick="cambiarEstilo('fantasia')">
-                    <i class="fas fa-dragon"></i>Fantasía
-                </button>
-                <button class="style-btn" onclick="cambiarEstilo('3d')">
-                    <i class="fas fa-cube"></i>3D
+                <button class="opcion-rapida" data-estilo="Digital" title="Digital">
+                    <i class="fas fa-microchip"></i>
                 </button>
             </div>
+        </div>
+    
+        <!-- Secciones de categorías -->
+        <div class="seccion-barra colapsable">
+            <button class="boton-desplegable" data-categoria="effects">
+                <i class="fas fa-magic"></i>
+                <span>Effects</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    
+        <div class="seccion-barra colapsable">
+            <button class="boton-desplegable" data-categoria="character">
+                <i class="fas fa-user"></i>
+                <span>Character</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    
+        <div class="seccion-barra colapsable">
+            <button class="boton-desplegable" data-categoria="object">
+                <i class="fas fa-cube"></i>
+                <span>Object</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    
+        <div class="seccion-barra colapsable">
+            <button class="boton-desplegable" data-categoria="colors">
+                <i class="fas fa-palette"></i>
+                <span>Colors</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    
+        <div class="controles-generacion">
+            <div class="control-cantidad">
+                <button class="boton-control"><i class="fas fa-minus"></i></button>
+                <span>4</span>
+                <button class="boton-control"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="control-aspecto">
+                <button class="boton-aspecto">1:2</button>
+            </div>
+        </div>
+    
+        <button class="boton-generar">Generate</button>
+    </nav>
 
-            <div class="seccion-resultado" id="seccionResultado">
-                <div class="indicador-carga" id="indicadorCarga">
+    <div class="contenedor-aplicacion">
+        <main class="contenido-principal">
+            <!-- Estado inicial -->
+            <div class="estado-inicial" id="estadoInicial">
+                <div class="mensaje-bienvenida">
+                    <i class="fas fa-images"></i>
+                    <h2>Bienvenido a CreadorIA</h2>
+                    <p>Tus creaciones aparecerán aquí</p>
+                    <span>Describe lo que quieres crear y presiona Generar</span>
+                </div>
+            </div>
+
+            <!-- Estado de generación -->
+            <div class="estado-generacion" id="estadoGeneracion" style="display: none;">
+                <div class="cuadricula-galeria" id="cuadriculaGeneracion">
+                    <!-- Las imágenes generadas se añadirán aquí -->
+                </div>
+                
+                <div class="indicador-carga" id="indicadorGeneracion" style="display: none;">
                     <div class="animacion-carga"></div>
-                    <p>Generando imagen...</p>
+                    <p>Generando tu imagen...</p>
+                    <span class="estado-generacion">Procesando prompt...</span>
                 </div>
-                <img src="" alt="Imagen generada" class="imagen-resultado">
-                <button class="boton-descargar" id="botonDescargar" onclick="descargarImagen()">
-                    <i class="fas fa-download"></i>
-                    <span>Descargar Imagen</span>
-                </button>
             </div>
-
-            <div class="gallery-grid" id="contenedorGaleria"></div>
-
-            <div id="modal" class="modal">
-                <div class="modal-content">
-                    <button class="close-btn" onclick="cerrarModal()">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <img src="" alt="" id="modalImage" class="modal-image">
-                    <div class="modal-info">
-                        <p class="prompt-text"></p>
-                        <button class="download-btn" onclick="descargarImagen()">
-                            <i class="fas fa-download"></i>
-                            <span>Descargar</span>
-                        </button>
+        </main>
+            <!-- Plantilla de generación -->
+            <div class="contenedor-generacion" data-estado="cargando">
+                <div class="contenedor-imagen-generada">
+                    <div class="shimmer"></div>
+                    <img src="" alt="Imagen generada" class="imagen-generada">
+                </div>
+                <div class="info-generacion">
+                    <p class="prompt-generacion">Generando imagen...</p>
+                    <div class="controles-generacion">
+                        <button class="boton-mini" title="Refinar"><i class="fas fa-wand-magic-sparkles"></i></button>
+                        <button class="boton-mini" title="Descargar"><i class="fas fa-download"></i></button>
+                        <button class="boton-mini" title="Compartir"><i class="fas fa-share"></i></button>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Indicador de carga inicial -->
+            <div class="indicador-carga" id="indicadorGeneracion">
+                <div class="animacion-carga"></div>
+                <p>Preparando entorno de generación...</p>
+                <span class="estado-generacion">Cargando modelos IA...</span>
             </div>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <main class="contenido-principal">
+        <div class="galeria-imagenes"></div>
+    </main>
+    <script type="module" src="src/js/main.js"></script>
 </body>
 </html>

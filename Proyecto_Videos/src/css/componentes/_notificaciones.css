@@ -1,0 +1,19 @@
+.notificacion-error {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff3333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.3s ease;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}

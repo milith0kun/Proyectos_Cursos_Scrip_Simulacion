@@ -1,0 +1,196 @@
+.panel-lateral {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: #1e1e1e;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.app-title h1 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    font-weight: 500;
+}
+
+.entrada-descripcion {
+    background: #2a2a2a;
+    border-radius: 10px;
+    padding: 12px;
+    position: relative;
+}
+
+.campo-texto {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 40px 8px 8px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    resize: none;
+}
+
+.controles-entrada {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.boton-asistente,
+.boton-variaciones {
+    color: #888;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.opciones-rapidas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.opcion-rapida {
+    aspect-ratio: 1;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 8px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.boton-desplegable {
+    width: 100%;
+    padding: 12px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.boton-desplegable i:last-child {
+    margin-left: auto;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.controles-generacion {
+    margin-top: auto;
+    background: #2a2a2a;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
+.control-cantidad button {
+    width: 28px;
+    height: 28px;
+    background: #333;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.control-aspecto button {
+    padding: 6px 12px;
+    background: #333;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.boton-generar {
+    width: 100%;
+    padding: 14px;
+    background: #0066ff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 10px;
+}
+
+/* Efectos hover */
+.boton-asistente:hover,
+.boton-variaciones:hover {
+    background: #333;
+    color: #fff;
+}
+
+.opcion-rapida:hover,
+.boton-desplegable:hover,
+.control-cantidad button:hover,
+.control-aspecto button:hover {
+    background: #333;
+    color: #fff;
+}
+
+.boton-generar:hover {
+    background: #0052cc;
+    transform: translateY(-1px);
+}
+
+/* Focus states */
+.campo-texto:focus {
+    outline: none;
+}
+
+.campo-texto::placeholder {
+    color: #666;
+}
+
+.boton-desplegable.activo {
+    background: #333;
+    color: #fff;
+}
+
+.opcion-rapida.activo {
+    background: #0066ff;
+    color: #fff;
+}

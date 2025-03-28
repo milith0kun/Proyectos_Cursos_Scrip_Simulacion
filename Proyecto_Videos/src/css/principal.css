@@ -1,0 +1,13 @@
+/* Importar variables y utilidades base */
+@import './componentes/_variables.css';
+@import './componentes/_utilidades.css';
+
+/* Importar componentes principales */
+@import './componentes/_encabezado.css';
+@import './componentes/_barraLateral.css';
+@import './componentes/_contenidoPrincipal.css';
+@import './componentes/_botones.css';
+@import './componentes/_galeria.css';
+@import './componentes/_dialogos.css';
+@import './componentes/_notificaciones.css';
+

@@ -1,0 +1,105 @@
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 70px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.logo i {
+    font-size: 1.4em;
+    background: linear-gradient(135deg, #0066ff, #4d94ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navegacion-principal {
+    display: flex;
+    gap: 8px;
+}
+
+.boton-navegacion {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: transparent;
+    color: #888;
+    border: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.boton-navegacion:hover {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.boton-navegacion.activo {
+    background: #0066ff;
+    color: #fff;
+}
+
+.controles-usuario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.boton-probar {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #2a2a2a;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.boton-probar:hover {
+    background: #333;
+    transform: translateY(-1px);
+}
+
+.selector-tamano {
+    padding: 8px 32px 8px 12px;
+    border-radius: 8px;
+    background: #2a2a2a;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    transition: all 0.2s;
+}
+
+.selector-tamano:hover {
+    background-color: #333;
+}
+
+.selector-tamano:focus {
+    outline: none;
+    background-color: #333;
+}
